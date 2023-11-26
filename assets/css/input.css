@@ -3,7 +3,101 @@
 @tailwind utilities;
 
 @layer base{
-    body{
-        @apply font-urbanist
+    *{
+        text-decoration-color: inherit;
     }
+    body{
+        @apply font-urbanist selection:bg-primary selection:text-white;
+        padding-bottom: 300px;
+    }
+
+    input{
+        @apply focus:outline-none
+    }
+}
+
+@layer components{
+
+/* Common Styling */
+._edumy_btn_primary{
+    @apply bg-primary text-white rounded-lg font-semibold  px-5 py-3 m-0 inline-flex items-center
+}
+
+._edumy_section_gap {
+    @apply mt-[100px]
+}
+
+._edumy_section_title {
+    @apply text-5xl leading-[58px] text-dark font-bold underline decoration-dark
+}
+
+._edumy_section_title > span {
+    @apply text-primary underline decoration-primary
+}
+
+._edumy_slider_btn{
+    @apply w-14 h-14 rounded-full border-2 border-primary bg-transparent  inline-flex justify-center items-center
+}
+
+._edumy_slider_btn.active{
+    @apply bg-primary 
+}
+._edumy_slider_btn.active * {
+    @apply fill-white
+}
+
+
+/* Services Section */
+._edumy_services_card{
+    @apply flex items-center gap-x-4 relative px-7 py-38px rounded-10px before:absolute before:block before:inset-0 before:rounded-10px before:-z-1 before:opacity-10 
+}
+
+/* Edumy Course Card */
+._edumy_course_card {
+    @apply p-5 rounded-15px border-[#ddd] border  bg-white
+}
+
+._edumay_course_card_category {
+    @apply bg-primary-100 text-primary decoration-primary font-medium text-sm px-4 py-7px leading-[auto]
+}
+
+._edumy_course_card_text{
+    @apply text-gray text-sm font-normal decoration-gray flex items-center gap-x-2 
+}
+._edumy_course_card_title{
+    @apply text-dark font-semibold text-2xl leading-8 decoration-dark capitalize
+}
+
+._edumy_course_card_price{
+    @apply text-dark text-2xl font-bold leading-8
+}
+
+._edumy_course_card_btn{
+    @apply flex justify-center items-center border-primary-200 w-10 h-10 rounded-full border duration-300 hover:bg-primary hover:border-primary hover:fill-white
+}
+
+._edumy_course_card_btn:hover  *{
+    @apply text-white !fill-white
+}
+
+/* Edumy Feature Section */
+._edumy_feature_card{
+@apply relative before:absolute before:block before:w-px before:h-[153px] before:bg-[#EAEAEA] before:-left-12 before:top-1/2 before:-translate-y-1/2 [&:nth-child(3n+1)]:before:content-none
+}
+
+
+._edumy_feature_card_title{
+@apply text-dark text-22px leading-8 font-medium mt-4 mb-3 underline decoration-gray
+}
+
+/* Testimonial Section */
+
+._edumy_slider_pagination > *{
+    @apply w-10 h-2 bg-[#D8F0E1] rounded-full duration-300 cursor-pointer
+}
+
+._edumy_slider_pagination > .active{
+    @apply bg-primary
+}
+    
 }
