@@ -44,7 +44,8 @@ module.exports = {
       },
       fontSize : {
         "22px" : "22px",
-        "34px" : "34px"
+        "34px" : "34px",
+        "40px" : "40px",
       }, 
       spacing: {
         "5px" : "5px",
@@ -64,6 +65,7 @@ module.exports = {
         "65px" : "65px",
         "90px" : "90px",
         "70px" : "70px",
+        "85px" : "85px",
         "88px" : "88px",
         "100px" : "100px",
      
@@ -73,7 +75,8 @@ module.exports = {
       },
       borderRadius : {
         "10px" : "10px",
-        "15px" : "15px"
+        "15px" : "15px",
+        "25px" : "25px",
       }
     },
   },
