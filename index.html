@@ -29,8 +29,8 @@
                 <div>
                     <img src="./assets/images/header/logo.svg" alt="Edumy">
                 </div>
-                <nav class="navbar-nav" id="nav">
-                    <ul class="mav-list flex justify-center items-center gap-x-10">
+                <nav class="navbar-nav hidden lg:block" id="nav">
+                    <ul class="mav-list flex justify-center items-center gap-x-7 xl:gap-x-10">
                         <li class="nav-item flex items-center gap-x-2">
                             <a href="#" class="nav-link text-primary text-sm font-normal leading-22px">Home</a>
 
@@ -48,9 +48,9 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="flex items-center justify-end">
+                <div class="hidden lg:flex items-center justify-end">
                     <!--Search Form  -->
-                    <div class="relative w-[190px] mr-[99px]">
+                    <div class="relative w-[190px] mr-10 xl:mr-[99px]">
                         <input type="text" placeholder="Search"
                             class="bg-[#F9F9F9] w-full px-15px py-3 text-sm text-[#b7b7b7] rounded-lg">
                         <button class="absolute right-15px top-1/2 -translate-y-1/2">
@@ -63,6 +63,14 @@
                         <button class="_edumy_btn_primary">Register</button>
                     </div>
                 </div>
+                <!-- Toggle Btn -->
+                <button class="text-md p-2 border-primary-100 border-2 rounded-md fill-primary lg:hidden bg-primary-50">
+                    <svg width="20" height="20" class="text-xl w-5 h-5" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512">
+                        <path
+                            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+                    </svg>
+                </button>
             </div>
         </div>
     </header>
@@ -70,12 +78,13 @@
 
     <main>
         <!-- Hero Edumy Start -->
-        <section class="hero bg-[#EEFBF3]" id="home">
+        <section class="hero bg-[#EEFBF3] overflow-x-hidden" id="home">
             <div class="container">
-                <div class="flex">
-                    <div class="w-7/12">
-                        <div class="content-section pt-[129px] pb-[128px]">
-                            <h1 class=" text-[70px] leading-[78px] text-dark font-bold mb-7 underline decoration-dark">
+                <div class="flex items-center flex-wrap lg:flex-nowrap">
+                    <div class="w-full lg:w-1/2 xl:w-7/12 lg:pr-30px xl:pr-0">
+                        <div class="content-section pt-6 pb-14 lg:py-24 xl:pt-[129px] xl:pb-[128px]">
+                            <h1
+                                class="text-dark font-semibold sm:font-bold mb-7 underline decoration-dark leading-tight text-4xl md:text-5xl xl:text-[70px] xl:leading-[78px] max-w-[500px] lg:max-w-none">
                                 Aim
                                 to be Efficient
                                 by <span class="text-secondary">Enhancing</span> Skills</h1>
@@ -84,8 +93,8 @@
                                 practical
                                 knowledge with best & world class mentors. We help you
                                 find the perfect course to grow your skill. </p>
-                            <div class="mt-10">
-                                <button class="_edumy_btn_primary gap-x-3.5 text-base px-5 py-18px">
+                            <div class="mt-7 sm:mt-10">
+                                <button class="_edumy_btn_primary gap-x-3.5 text-base px-5 py-3 sm:py-18px">
                                     <span>Explore Courses</span>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" fill="none">
                                         <path fill="#fff"
@@ -95,12 +104,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-5/12">
-                        <div class="image-section relative">
+                    <div class="w-full lg:w-1/2 xl:w-5/12 order-first lg:order-last">
+                        <div class="image-section relative pt-10 lg:pt-0">
                             <img src="./assets/images/hero/hero-image.png" alt="hero-image"
-                                class="absolute top-50px -right-10 max-w-[549px]">
+                                class="xl:absolute top-50px -right-10 xl:max-w-[549px]">
                             <img src="./assets/images/hero/shape.svg" alt="arrow shape"
-                                class="absolute top-[440px] right-full">
+                                class="absolute top-[350px] right-[85%] xl:top-[440px] xl:right-full hidden md:block">
                         </div>
                     </div>
                 </div>
@@ -113,49 +122,49 @@
         <section class="services _edumy_section_gap" id="services">
             <div class="container">
                 <div>
-                    <h2 class="_edumy_section_title text-center mx-auto max-w-[591px]">
+                    <h2 class="_edumy_section_title text-center mx-auto sm:max-w-[591px]">
                         Become In Demand On The <span>Job Market</span> Today!
                     </h2>
-                    <div class="grid grid-cols-4 gap-30px mt-50px">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-30px mt-8 sm:mt-50px">
                         <!-- Edumy Services Card -->
                         <div class="_edumy_services_card before:bg-[#F34334]">
                             <img src="./assets/images/services/icon-01.png" alt="icon-01.png">
-                            <h6 class="text-dark text-2xl font-medium ">Design</h6>
+                            <h6 class="text-dark text-xl md:text-2xl font-medium ">Design</h6>
                         </div>
                         <!-- Edumy Services Card -->
                         <div class="_edumy_services_card before:bg-[#F34334]">
                             <img src="./assets/images/services/icon-02.png" alt="icon-02.png">
-                            <h6 class="text-dark text-2xl font-medium ">Design</h6>
+                            <h6 class="text-dark text-xl md:text-2xl font-medium ">Design</h6>
                         </div>
                         <!-- Edumy Services Card -->
                         <div class="_edumy_services_card before:bg-[#F34334]">
                             <img src="./assets/images/services/icon-03.png" alt="icon-03.png">
-                            <h6 class="text-dark text-2xl font-medium ">Design</h6>
+                            <h6 class="text-dark text-xl md:text-2xl font-medium ">Design</h6>
                         </div>
                         <!-- Edumy Services Card -->
                         <div class="_edumy_services_card before:bg-[#F34334]">
                             <img src="./assets/images/services/icon-04.png" alt="icon-04.png">
-                            <h6 class="text-dark text-2xl font-medium ">Design</h6>
+                            <h6 class="text-dark text-xl md:text-2xl font-medium ">Design</h6>
                         </div>
                         <!-- Edumy Services Card -->
                         <div class="_edumy_services_card before:bg-[#F34334]">
                             <img src="./assets/images/services/icon-05.png" alt="icon-05.png">
-                            <h6 class="text-dark text-2xl font-medium ">Design</h6>
+                            <h6 class="text-dark text-xl md:text-2xl font-medium ">Design</h6>
                         </div>
                         <!-- Edumy Services Card -->
                         <div class="_edumy_services_card before:bg-[#F34334]">
                             <img src="./assets/images/services/icon-06.png" alt="icon-06.png">
-                            <h6 class="text-dark text-2xl font-medium ">Design</h6>
+                            <h6 class="text-dark text-xl md:text-2xl font-medium ">Design</h6>
                         </div>
                         <!-- Edumy Services Card -->
                         <div class="_edumy_services_card before:bg-[#F34334]">
                             <img src="./assets/images/services/icon-07.png" alt="icon-07.png">
-                            <h6 class="text-dark text-2xl font-medium ">Design</h6>
+                            <h6 class="text-dark text-xl md:text-2xl font-medium ">Design</h6>
                         </div>
                         <!-- Edumy Services Card -->
                         <div class="_edumy_services_card before:bg-[#F34334]">
                             <img src="./assets/images/services/icon-01.png" alt="icon-01.png">
-                            <h6 class="text-dark text-2xl font-medium ">Design</h6>
+                            <h6 class="text-dark text-xl md:text-2xl font-medium ">Design</h6>
                         </div>
                     </div>
                 </div>
@@ -166,9 +175,9 @@
         <!-- Top Courses Edumy Start -->
         <section class="top-courses mb-2.5">
             <div class="container">
-                <div class="mt-[62px]">
+                <div class="mt-10 md:mt-[62px]">
                     <!-- Course Card Edumy Grid  -->
-                    <div class="_edumy_course_card group grid grid-cols-2 gap-30px">
+                    <div class="_edumy_course_card group grid grid-cols-1 sm:p-30px lg:grid-cols-2 gap-30px">
                         <div class="overflow-hidden rounded-xl">
                             <img src="./assets/images/top-courses/course-card-image-01.png"
                                 alt="course-card-image-01.png"
@@ -176,10 +185,10 @@
                         </div>
                         <div>
                             <div class="flex items-center justify-between">
-                                <span class="_edumay_course_card_category text-lg">
+                                <span class="_edumay_course_card_category sm:text-lg">
                                     Design
                                 </span>
-                                <div class="_edumy_course_card_text gap-x-1 text-lg">
+                                <div class="_edumy_course_card_text gap-x-1 sm:text-lg">
                                     <span>
                                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -192,7 +201,8 @@
                                 </div>
                             </div>
                             <div class="mt-5">
-                                <h3 class="_edumy_course_card_title text-34px leading-48px">Become a professional UI/UX
+                                <h3 class="_edumy_course_card_title sm:text-34px sm:leading-48px">Become a professional
+                                    UI/UX
                                     Designer by expert</h3>
                                 <p class="_edumy_course_card_text text-base mt-15px">With best world class mentors, this
                                     learning platform is based on practical knowledge</p>
@@ -238,22 +248,28 @@
                             </div>
                             <div class="border-t border-t-[#f0f0f0] flex items-center justify-between pt-19px">
                                 <h6 class="_edumy_course_card_price">$180.00</h6>
-                                <a href="#" class="_edumy_course_card_btn group">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M4 11.7256C4 11.3459 4.28215 11.0321 4.64823 10.9824L4.75 10.9756H19.75C20.1642 10.9756 20.5 11.3114 20.5 11.7256C20.5 12.1053 20.2178 12.4191 19.8518 12.4687L19.75 12.4756L4.75 12.4756C4.33579 12.4756 4 12.1398 4 11.7256Z"
-                                            fill="#309255" />
-                                        <path
-                                            d="M13.171 6.23271C12.8775 5.94045 12.8765 5.46558 13.1687 5.17206C13.4344 4.90522 13.851 4.88012 14.1451 5.09734L14.2294 5.16977L20.2794 11.1938C20.547 11.4603 20.5714 11.8784 20.3524 12.1724L20.2794 12.2567L14.2294 18.2817C13.9359 18.574 13.4611 18.573 13.1688 18.2795C12.9031 18.0127 12.8797 17.5959 13.0982 17.3028L13.171 17.2188L18.687 11.7249L13.171 6.23271Z"
-                                            fill="#309255" />
-                                    </svg>
+                                <a href="#"
+                                    class="_edumy_course_card_btn group sm:rounded-lg sm:bg-primary sm:px-5 sm:py-3 sm:w-auto sm:h-auto sm:border-0">
+                                    <span
+                                        class="hidden sm:block text-white font-semibold underline decoration-white">Enroll
+                                        Now</span>
+                                    <span class="sm:hidden">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M4 11.7256C4 11.3459 4.28215 11.0321 4.64823 10.9824L4.75 10.9756H19.75C20.1642 10.9756 20.5 11.3114 20.5 11.7256C20.5 12.1053 20.2178 12.4191 19.8518 12.4687L19.75 12.4756L4.75 12.4756C4.33579 12.4756 4 12.1398 4 11.7256Z"
+                                                fill="#309255" />
+                                            <path
+                                                d="M13.171 6.23271C12.8775 5.94045 12.8765 5.46558 13.1687 5.17206C13.4344 4.90522 13.851 4.88012 14.1451 5.09734L14.2294 5.16977L20.2794 11.1938C20.547 11.4603 20.5714 11.8784 20.3524 12.1724L20.2794 12.2567L14.2294 18.2817C13.9359 18.574 13.4611 18.573 13.1688 18.2795C12.9031 18.0127 12.8797 17.5959 13.0982 17.3028L13.171 17.2188L18.687 11.7249L13.171 6.23271Z"
+                                                fill="#309255" />
+                                        </svg>
+                                    </span>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="grid grid-cols-3 gap-x-30px mt-45px">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-30px gap-x-6 xl:gap-x-30px mt-45px">
                     <!-- Course Card Edumy -->
                     <div class="_edumy_course_card group">
                         <div class="overflow-hidden rounded-xl">
@@ -319,7 +335,7 @@
                                 <span>392 lectures</span>
                             </div>
                         </div>
-                        <div class="border-t border-t-[#f0f0f0] flex items-center justify-between pt-19px">
+                        <div class="border-t border-t-[#f0f0f0] flex items-center justify-between pt-4 sm:pt-19px">
                             <h6 class="_edumy_course_card_price">$180.00</h6>
                             <a href="#" class="_edumy_course_card_btn group">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -338,7 +354,8 @@
                     <div class="_edumy_course_card group">
                         <div class="overflow-hidden rounded-xl">
                             <img src="./assets/images/top-courses/course-card-image-02.png"
-                                alt="course-card-image-02.png" class="rounded-xl duration-300 group-hover:scale-110">
+                                alt="course-card-image-02.png"
+                                class="rounded-xl duration-300 group-hover:scale-110 w-full">
                         </div>
                         <div class="mt-15px flex items-center justify-between">
                             <span class="_edumay_course_card_category">
@@ -395,10 +412,10 @@
                                             fill="#747474" />
                                     </g>
                                 </svg>
-                                <span>32 lectures</span>
+                                <span>392 lectures</span>
                             </div>
                         </div>
-                        <div class="border-t border-t-[#f0f0f0] flex items-center justify-between pt-19px">
+                        <div class="border-t border-t-[#f0f0f0] flex items-center justify-between pt-4 sm:pt-19px">
                             <h6 class="_edumy_course_card_price">$180.00</h6>
                             <a href="#" class="_edumy_course_card_btn group">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -417,7 +434,8 @@
                     <div class="_edumy_course_card group">
                         <div class="overflow-hidden rounded-xl">
                             <img src="./assets/images/top-courses/course-card-image-02.png"
-                                alt="course-card-image-02.png" class="rounded-xl duration-300 group-hover:scale-110">
+                                alt="course-card-image-02.png"
+                                class="rounded-xl duration-300 group-hover:scale-110 w-full">
                         </div>
                         <div class="mt-15px flex items-center justify-between">
                             <span class="_edumay_course_card_category">
@@ -474,10 +492,10 @@
                                             fill="#747474" />
                                     </g>
                                 </svg>
-                                <span>32 lectures</span>
+                                <span>392 lectures</span>
                             </div>
                         </div>
-                        <div class="border-t border-t-[#f0f0f0] flex items-center justify-between pt-19px">
+                        <div class="border-t border-t-[#f0f0f0] flex items-center justify-between pt-4 sm:pt-19px">
                             <h6 class="_edumy_course_card_price">$180.00</h6>
                             <a href="#" class="_edumy_course_card_btn group">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -492,17 +510,18 @@
                             </a>
                         </div>
                     </div>
+
                 </div>
         </section>
         <!-- Top Courses Edumy End -->
 
         <!-- Courses Edumy Start -->
-        <section class="courses bg-primary-50 _edumy_section_gap pt-100px pb-[120px]" id="courses">
+        <section class="courses bg-primary-50 _edumy_section_gap py-10 sm:py-16 lg:pt-100px lg:pb-[120px]" id="courses">
             <div class="container">
                 <!-- UI/UX Design Start -->
                 <div class="ui-ux-design-section">
                     <div class="flex items-center justify-between">
-                        <h2 class="_edumy_section_title"><span>UI/UX</span> Design</h2>
+                        <h2 class="_edumy_section_title"><span>Web</span> Development</h2>
                         <div class="flex items-center gap-x-3">
                             <button class="_edumy_slider_btn ux-ui-swiper-prev">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -529,7 +548,7 @@
                         </div>
                     </div>
                     <!-- Card Section  -->
-                    <div class="swiper ui-ux-swiper mt-12 px-1">
+                    <div class="swiper ui-ux-swiper mt-8 lg:mt-12 px-1">
                         <div class="swiper-wrapper">
                             <!-- Course Card Edumy slide-->
                             <div class="swiper-slide">
@@ -952,7 +971,7 @@
                 </div> <!-- ./ UI/UX Design -->
 
                 <!-- Web Development Start -->
-                <div class="web-development-section mt-[109px]">
+                <div class="web-development-section mt-10 sm:mt-16 lg:mt-[109px] overflow-x-hidden">
                     <div class="flex items-center justify-between">
                         <h2 class="_edumy_section_title"><span>UI/UX</span> Design</h2>
                         <div class="flex items-center gap-x-3">
@@ -1229,15 +1248,16 @@
         <!-- Courses Edumy End -->
 
         <!-- Feature Edumy start -->
-        <section class="feature _edumy_section_gap pb-5" id="feature">
+        <section class="feature _edumy_section_gap lg:pb-5" id="feature">
             <div class="container">
                 <div>
                     <h2 class="_edumy_section_title text-center">Why <span>Choose</span> Us</h2>
                 </div>
                 <!-- Card Section -->
                 <div
-                    class="relative before:absolute before:bg-[#EAEAEA] before:h-px before:inset-x-5 before:bottom-[211px]">
-                    <div class="grid grid-cols-3 mt-55px gap-x-24 gap-y-[111px]">
+                    class="relative before:hidden lg:before:block before:absolute before:bg-[#EAEAEA] before:h-px before:inset-x-5 before:bottom-1/2 xl:before:bottom-[211px]">
+                    <div
+                        class="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 xl:gap-x-24 gap-y-10 lg:gap-y-24 xl:gap-y-[111px] mt-55px">
                         <!-- Feature Card -->
                         <div class="_edumy_feature_card">
                             <img src="./assets/images/feature/icon-01.png" alt="icon-01">
@@ -1293,7 +1313,7 @@
         <!-- Feature Edumy End -->
 
         <!-- Testimonial Edumy Start -->
-        <section class="testimonial _edumy_section_gap bg-primary-50 pt-100px pb-90px">
+        <section class="testimonial _edumy_section_gap bg-primary-50 py-11 sm:py-14 lg:pt-100px lg:pb-90px">
             <div class="container">
                 <div>
                     <h2 class="_edumy_section_title text-center">Stories of <span>Our Successful</span> Students</h2>
@@ -1301,9 +1321,9 @@
                         practical knowledge with best & mentors.</p>
                 </div>
                 <div
-                    class="relative before:absolute before:bg-[#E3E3E3] before:block before:w-px before:left-1/2 before:-translate-x-1/2 before:inset-y-10">
-                    <div class="mt-70px swiper testimonial-swiper">
-                        <div class="swiper-wrapper">
+                    class="relative before:hidden lg:before:block before:absolute before:bg-[#E3E3E3] before:w-px before:left-1/2 before:-translate-x-1/2 before:inset-y-10">
+                    <div class="mt-10 lg:mt-70px swiper testimonial-swiper sm:px-10 lg:px-0">
+                        <div class="swiper-wrapper ">
                             <!-- Testimonial Card Slide -->
                             <div class="swiper-slide">
                                 <div class="testimonial-card text-center">
@@ -1315,24 +1335,16 @@
                                     </div>
                                     <div>
                                         <h6
-                                            class="text-dark leading-auto text-2xl font-semibold underline decoration-dark">
+                                            class="text-dark leading-auto text-22px sm:text-2xl font-semibold underline decoration-dark">
                                             Michael
                                             Smith</h6>
                                         <div
-                                            class="flex justify-center items-center my-2 gap-x-2.5 text-lg text-lightGray font-normal">
+                                            class="flex justify-center items-center my-2 gap-x-2.5 sm:text-lg text-lightGray font-normal">
                                             <span>Developer</span>
                                             <span class="bg-lightGray w-0.5 h-21px block"></span>
                                             <span>Michael Smith</span>
                                         </div>
-                                        <ul class="flex items-center gap-x-1 justify-center mb-8">
-                                            <li>
-                                                <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M18.4189 14.32C18.1599 14.571 18.0409 14.934 18.0999 15.29L18.9889 20.21C19.0639 20.627 18.8879 21.049 18.5389 21.29C18.1969 21.54 17.7419 21.57 17.3689 21.37L12.9399 19.06C12.7859 18.978 12.6149 18.934 12.4399 18.929H12.1689C12.0749 18.943 11.9829 18.973 11.8989 19.019L7.46888 21.34C7.24988 21.45 7.00188 21.489 6.75888 21.45C6.16688 21.338 5.77188 20.774 5.86888 20.179L6.75888 15.259C6.81788 14.9 6.69888 14.535 6.43988 14.28L2.82888 10.78C2.52688 10.487 2.42188 10.047 2.55988 9.65C2.69388 9.254 3.03588 8.965 3.44888 8.9L8.41888 8.179C8.79688 8.14 9.12888 7.91 9.29888 7.57L11.4889 3.08C11.5409 2.98 11.6079 2.888 11.6889 2.81L11.7789 2.74C11.8259 2.688 11.8799 2.645 11.9399 2.61L12.0489 2.57L12.2189 2.5H12.6399C13.0159 2.539 13.3469 2.764 13.5199 3.1L15.7389 7.57C15.8989 7.897 16.2099 8.124 16.5689 8.179L21.5389 8.9C21.9589 8.96 22.3099 9.25 22.4489 9.65C22.5799 10.051 22.4669 10.491 22.1589 10.78L18.4189 14.32Z"
-                                                        fill="#FFA200" />
-                                                </svg>
-                                            </li>
+                                        <ul class="flex items-center gap-x-1 justify-center mb-6 sm:mb-8">
                                             <li>
                                                 <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
@@ -1375,7 +1387,8 @@
 
                                             </li>
                                         </ul>
-                                        <p class="text-gray text-xl underline decoration-gray leading-30px">I learned
+                                        <p class="text-gray text-lg sm:text-xl underline decoration-gray leading-30px">I
+                                            learned
                                             Graphic
                                             Design
                                             from this platform. The whole process like enroll a course to get a
@@ -1396,24 +1409,16 @@
                                     </div>
                                     <div>
                                         <h6
-                                            class="text-dark leading-auto text-2xl font-semibold underline decoration-dark">
+                                            class="text-dark leading-auto text-22px sm:text-2xl font-semibold underline decoration-dark">
                                             Michael
                                             Smith</h6>
                                         <div
-                                            class="flex justify-center items-center my-2 gap-x-2.5 text-lg text-lightGray font-normal">
+                                            class="flex justify-center items-center my-2 gap-x-2.5 sm:text-lg text-lightGray font-normal">
                                             <span>Developer</span>
                                             <span class="bg-lightGray w-0.5 h-21px block"></span>
                                             <span>Michael Smith</span>
                                         </div>
-                                        <ul class="flex items-center gap-x-1 justify-center mb-8">
-                                            <li>
-                                                <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M18.4189 14.32C18.1599 14.571 18.0409 14.934 18.0999 15.29L18.9889 20.21C19.0639 20.627 18.8879 21.049 18.5389 21.29C18.1969 21.54 17.7419 21.57 17.3689 21.37L12.9399 19.06C12.7859 18.978 12.6149 18.934 12.4399 18.929H12.1689C12.0749 18.943 11.9829 18.973 11.8989 19.019L7.46888 21.34C7.24988 21.45 7.00188 21.489 6.75888 21.45C6.16688 21.338 5.77188 20.774 5.86888 20.179L6.75888 15.259C6.81788 14.9 6.69888 14.535 6.43988 14.28L2.82888 10.78C2.52688 10.487 2.42188 10.047 2.55988 9.65C2.69388 9.254 3.03588 8.965 3.44888 8.9L8.41888 8.179C8.79688 8.14 9.12888 7.91 9.29888 7.57L11.4889 3.08C11.5409 2.98 11.6079 2.888 11.6889 2.81L11.7789 2.74C11.8259 2.688 11.8799 2.645 11.9399 2.61L12.0489 2.57L12.2189 2.5H12.6399C13.0159 2.539 13.3469 2.764 13.5199 3.1L15.7389 7.57C15.8989 7.897 16.2099 8.124 16.5689 8.179L21.5389 8.9C21.9589 8.96 22.3099 9.25 22.4489 9.65C22.5799 10.051 22.4669 10.491 22.1589 10.78L18.4189 14.32Z"
-                                                        fill="#FFA200" />
-                                                </svg>
-                                            </li>
+                                        <ul class="flex items-center gap-x-1 justify-center mb-6 sm:mb-8">
                                             <li>
                                                 <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
@@ -1456,7 +1461,8 @@
 
                                             </li>
                                         </ul>
-                                        <p class="text-gray text-xl underline decoration-gray leading-30px">I learned
+                                        <p class="text-gray text-lg sm:text-xl underline decoration-gray leading-30px">I
+                                            learned
                                             Graphic
                                             Design
                                             from this platform. The whole process like enroll a course to get a
@@ -1477,24 +1483,16 @@
                                     </div>
                                     <div>
                                         <h6
-                                            class="text-dark leading-auto text-2xl font-semibold underline decoration-dark">
+                                            class="text-dark leading-auto text-22px sm:text-2xl font-semibold underline decoration-dark">
                                             Michael
                                             Smith</h6>
                                         <div
-                                            class="flex justify-center items-center my-2 gap-x-2.5 text-lg text-lightGray font-normal">
+                                            class="flex justify-center items-center my-2 gap-x-2.5 sm:text-lg text-lightGray font-normal">
                                             <span>Developer</span>
                                             <span class="bg-lightGray w-0.5 h-21px block"></span>
                                             <span>Michael Smith</span>
                                         </div>
-                                        <ul class="flex items-center gap-x-1 justify-center mb-8">
-                                            <li>
-                                                <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M18.4189 14.32C18.1599 14.571 18.0409 14.934 18.0999 15.29L18.9889 20.21C19.0639 20.627 18.8879 21.049 18.5389 21.29C18.1969 21.54 17.7419 21.57 17.3689 21.37L12.9399 19.06C12.7859 18.978 12.6149 18.934 12.4399 18.929H12.1689C12.0749 18.943 11.9829 18.973 11.8989 19.019L7.46888 21.34C7.24988 21.45 7.00188 21.489 6.75888 21.45C6.16688 21.338 5.77188 20.774 5.86888 20.179L6.75888 15.259C6.81788 14.9 6.69888 14.535 6.43988 14.28L2.82888 10.78C2.52688 10.487 2.42188 10.047 2.55988 9.65C2.69388 9.254 3.03588 8.965 3.44888 8.9L8.41888 8.179C8.79688 8.14 9.12888 7.91 9.29888 7.57L11.4889 3.08C11.5409 2.98 11.6079 2.888 11.6889 2.81L11.7789 2.74C11.8259 2.688 11.8799 2.645 11.9399 2.61L12.0489 2.57L12.2189 2.5H12.6399C13.0159 2.539 13.3469 2.764 13.5199 3.1L15.7389 7.57C15.8989 7.897 16.2099 8.124 16.5689 8.179L21.5389 8.9C21.9589 8.96 22.3099 9.25 22.4489 9.65C22.5799 10.051 22.4669 10.491 22.1589 10.78L18.4189 14.32Z"
-                                                        fill="#FFA200" />
-                                                </svg>
-                                            </li>
+                                        <ul class="flex items-center gap-x-1 justify-center mb-6 sm:mb-8">
                                             <li>
                                                 <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
@@ -1537,7 +1535,8 @@
 
                                             </li>
                                         </ul>
-                                        <p class="text-gray text-xl underline decoration-gray leading-30px">I learned
+                                        <p class="text-gray text-lg sm:text-xl underline decoration-gray leading-30px">I
+                                            learned
                                             Graphic
                                             Design
                                             from this platform. The whole process like enroll a course to get a
@@ -1558,24 +1557,16 @@
                                     </div>
                                     <div>
                                         <h6
-                                            class="text-dark leading-auto text-2xl font-semibold underline decoration-dark">
+                                            class="text-dark leading-auto text-22px sm:text-2xl font-semibold underline decoration-dark">
                                             Michael
                                             Smith</h6>
                                         <div
-                                            class="flex justify-center items-center my-2 gap-x-2.5 text-lg text-lightGray font-normal">
+                                            class="flex justify-center items-center my-2 gap-x-2.5 sm:text-lg text-lightGray font-normal">
                                             <span>Developer</span>
                                             <span class="bg-lightGray w-0.5 h-21px block"></span>
                                             <span>Michael Smith</span>
                                         </div>
-                                        <ul class="flex items-center gap-x-1 justify-center mb-8">
-                                            <li>
-                                                <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M18.4189 14.32C18.1599 14.571 18.0409 14.934 18.0999 15.29L18.9889 20.21C19.0639 20.627 18.8879 21.049 18.5389 21.29C18.1969 21.54 17.7419 21.57 17.3689 21.37L12.9399 19.06C12.7859 18.978 12.6149 18.934 12.4399 18.929H12.1689C12.0749 18.943 11.9829 18.973 11.8989 19.019L7.46888 21.34C7.24988 21.45 7.00188 21.489 6.75888 21.45C6.16688 21.338 5.77188 20.774 5.86888 20.179L6.75888 15.259C6.81788 14.9 6.69888 14.535 6.43988 14.28L2.82888 10.78C2.52688 10.487 2.42188 10.047 2.55988 9.65C2.69388 9.254 3.03588 8.965 3.44888 8.9L8.41888 8.179C8.79688 8.14 9.12888 7.91 9.29888 7.57L11.4889 3.08C11.5409 2.98 11.6079 2.888 11.6889 2.81L11.7789 2.74C11.8259 2.688 11.8799 2.645 11.9399 2.61L12.0489 2.57L12.2189 2.5H12.6399C13.0159 2.539 13.3469 2.764 13.5199 3.1L15.7389 7.57C15.8989 7.897 16.2099 8.124 16.5689 8.179L21.5389 8.9C21.9589 8.96 22.3099 9.25 22.4489 9.65C22.5799 10.051 22.4669 10.491 22.1589 10.78L18.4189 14.32Z"
-                                                        fill="#FFA200" />
-                                                </svg>
-                                            </li>
+                                        <ul class="flex items-center gap-x-1 justify-center mb-6 sm:mb-8">
                                             <li>
                                                 <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
@@ -1618,7 +1609,8 @@
 
                                             </li>
                                         </ul>
-                                        <p class="text-gray text-xl underline decoration-gray leading-30px">I learned
+                                        <p class="text-gray text-lg sm:text-xl underline decoration-gray leading-30px">I
+                                            learned
                                             Graphic
                                             Design
                                             from this platform. The whole process like enroll a course to get a
@@ -1628,15 +1620,87 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- Testimonial Card Slide -->
+                            <div class="swiper-slide">
+                                <div class="testimonial-card text-center">
+                                    <div class="flex justify-center mb-15px">
+                                        <div class="w-fit rounded-full border p-7px border-[#ECECEC]">
+                                            <img src="./assets/images/testimonial/client-img-01.png" alt="client-img-01"
+                                                class="rounded-full">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h6
+                                            class="text-dark leading-auto text-22px sm:text-2xl font-semibold underline decoration-dark">
+                                            Michael
+                                            Smith</h6>
+                                        <div
+                                            class="flex justify-center items-center my-2 gap-x-2.5 sm:text-lg text-lightGray font-normal">
+                                            <span>Developer</span>
+                                            <span class="bg-lightGray w-0.5 h-21px block"></span>
+                                            <span>Michael Smith</span>
+                                        </div>
+                                        <ul class="flex items-center gap-x-1 justify-center mb-6 sm:mb-8">
+                                            <li>
+                                                <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M18.4189 14.32C18.1599 14.571 18.0409 14.934 18.0999 15.29L18.9889 20.21C19.0639 20.627 18.8879 21.049 18.5389 21.29C18.1969 21.54 17.7419 21.57 17.3689 21.37L12.9399 19.06C12.7859 18.978 12.6149 18.934 12.4399 18.929H12.1689C12.0749 18.943 11.9829 18.973 11.8989 19.019L7.46888 21.34C7.24988 21.45 7.00188 21.489 6.75888 21.45C6.16688 21.338 5.77188 20.774 5.86888 20.179L6.75888 15.259C6.81788 14.9 6.69888 14.535 6.43988 14.28L2.82888 10.78C2.52688 10.487 2.42188 10.047 2.55988 9.65C2.69388 9.254 3.03588 8.965 3.44888 8.9L8.41888 8.179C8.79688 8.14 9.12888 7.91 9.29888 7.57L11.4889 3.08C11.5409 2.98 11.6079 2.888 11.6889 2.81L11.7789 2.74C11.8259 2.688 11.8799 2.645 11.9399 2.61L12.0489 2.57L12.2189 2.5H12.6399C13.0159 2.539 13.3469 2.764 13.5199 3.1L15.7389 7.57C15.8989 7.897 16.2099 8.124 16.5689 8.179L21.5389 8.9C21.9589 8.96 22.3099 9.25 22.4489 9.65C22.5799 10.051 22.4669 10.491 22.1589 10.78L18.4189 14.32Z"
+                                                        fill="#FFA200" />
+                                                </svg>
+                                            </li>
+                                            <li>
+                                                <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M18.4189 14.32C18.1599 14.571 18.0409 14.934 18.0999 15.29L18.9889 20.21C19.0639 20.627 18.8879 21.049 18.5389 21.29C18.1969 21.54 17.7419 21.57 17.3689 21.37L12.9399 19.06C12.7859 18.978 12.6149 18.934 12.4399 18.929H12.1689C12.0749 18.943 11.9829 18.973 11.8989 19.019L7.46888 21.34C7.24988 21.45 7.00188 21.489 6.75888 21.45C6.16688 21.338 5.77188 20.774 5.86888 20.179L6.75888 15.259C6.81788 14.9 6.69888 14.535 6.43988 14.28L2.82888 10.78C2.52688 10.487 2.42188 10.047 2.55988 9.65C2.69388 9.254 3.03588 8.965 3.44888 8.9L8.41888 8.179C8.79688 8.14 9.12888 7.91 9.29888 7.57L11.4889 3.08C11.5409 2.98 11.6079 2.888 11.6889 2.81L11.7789 2.74C11.8259 2.688 11.8799 2.645 11.9399 2.61L12.0489 2.57L12.2189 2.5H12.6399C13.0159 2.539 13.3469 2.764 13.5199 3.1L15.7389 7.57C15.8989 7.897 16.2099 8.124 16.5689 8.179L21.5389 8.9C21.9589 8.96 22.3099 9.25 22.4489 9.65C22.5799 10.051 22.4669 10.491 22.1589 10.78L18.4189 14.32Z"
+                                                        fill="#FFA200" />
+                                                </svg>
+                                            </li>
+                                            <li>
+                                                <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M18.4189 14.32C18.1599 14.571 18.0409 14.934 18.0999 15.29L18.9889 20.21C19.0639 20.627 18.8879 21.049 18.5389 21.29C18.1969 21.54 17.7419 21.57 17.3689 21.37L12.9399 19.06C12.7859 18.978 12.6149 18.934 12.4399 18.929H12.1689C12.0749 18.943 11.9829 18.973 11.8989 19.019L7.46888 21.34C7.24988 21.45 7.00188 21.489 6.75888 21.45C6.16688 21.338 5.77188 20.774 5.86888 20.179L6.75888 15.259C6.81788 14.9 6.69888 14.535 6.43988 14.28L2.82888 10.78C2.52688 10.487 2.42188 10.047 2.55988 9.65C2.69388 9.254 3.03588 8.965 3.44888 8.9L8.41888 8.179C8.79688 8.14 9.12888 7.91 9.29888 7.57L11.4889 3.08C11.5409 2.98 11.6079 2.888 11.6889 2.81L11.7789 2.74C11.8259 2.688 11.8799 2.645 11.9399 2.61L12.0489 2.57L12.2189 2.5H12.6399C13.0159 2.539 13.3469 2.764 13.5199 3.1L15.7389 7.57C15.8989 7.897 16.2099 8.124 16.5689 8.179L21.5389 8.9C21.9589 8.96 22.3099 9.25 22.4489 9.65C22.5799 10.051 22.4669 10.491 22.1589 10.78L18.4189 14.32Z"
+                                                        fill="#FFA200" />
+                                                </svg>
+                                            </li>
+                                            <li>
+                                                <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M18.4189 14.32C18.1599 14.571 18.0409 14.934 18.0999 15.29L18.9889 20.21C19.0639 20.627 18.8879 21.049 18.5389 21.29C18.1969 21.54 17.7419 21.57 17.3689 21.37L12.9399 19.06C12.7859 18.978 12.6149 18.934 12.4399 18.929H12.1689C12.0749 18.943 11.9829 18.973 11.8989 19.019L7.46888 21.34C7.24988 21.45 7.00188 21.489 6.75888 21.45C6.16688 21.338 5.77188 20.774 5.86888 20.179L6.75888 15.259C6.81788 14.9 6.69888 14.535 6.43988 14.28L2.82888 10.78C2.52688 10.487 2.42188 10.047 2.55988 9.65C2.69388 9.254 3.03588 8.965 3.44888 8.9L8.41888 8.179C8.79688 8.14 9.12888 7.91 9.29888 7.57L11.4889 3.08C11.5409 2.98 11.6079 2.888 11.6889 2.81L11.7789 2.74C11.8259 2.688 11.8799 2.645 11.9399 2.61L12.0489 2.57L12.2189 2.5H12.6399C13.0159 2.539 13.3469 2.764 13.5199 3.1L15.7389 7.57C15.8989 7.897 16.2099 8.124 16.5689 8.179L21.5389 8.9C21.9589 8.96 22.3099 9.25 22.4489 9.65C22.5799 10.051 22.4669 10.491 22.1589 10.78L18.4189 14.32Z"
+                                                        fill="#FFA200" />
+                                                </svg>
+                                            </li>
+                                            <li>
+                                                <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M18.4189 14.32C18.1599 14.571 18.0409 14.934 18.0999 15.29L18.9889 20.21C19.0639 20.627 18.8879 21.049 18.5389 21.29C18.1969 21.54 17.7419 21.57 17.3689 21.37L12.9399 19.06C12.7859 18.978 12.6149 18.934 12.4399 18.929H12.1689C12.0749 18.943 11.9829 18.973 11.8989 19.019L7.46888 21.34C7.24988 21.45 7.00188 21.489 6.75888 21.45C6.16688 21.338 5.77188 20.774 5.86888 20.179L6.75888 15.259C6.81788 14.9 6.69888 14.535 6.43988 14.28L2.82888 10.78C2.52688 10.487 2.42188 10.047 2.55988 9.65C2.69388 9.254 3.03588 8.965 3.44888 8.9L8.41888 8.179C8.79688 8.14 9.12888 7.91 9.29888 7.57L11.4889 3.08C11.5409 2.98 11.6079 2.888 11.6889 2.81L11.7789 2.74C11.8259 2.688 11.8799 2.645 11.9399 2.61L12.0489 2.57L12.2189 2.5H12.6399C13.0159 2.539 13.3469 2.764 13.5199 3.1L15.7389 7.57C15.8989 7.897 16.2099 8.124 16.5689 8.179L21.5389 8.9C21.9589 8.96 22.3099 9.25 22.4489 9.65C22.5799 10.051 22.4669 10.491 22.1589 10.78L18.4189 14.32Z"
+                                                        fill="#D8F0E1" />
+                                                </svg>
+
+                                            </li>
+                                        </ul>
+                                        <p class="text-gray text-lg sm:text-xl underline decoration-gray leading-30px">I
+                                            learned
+                                            Graphic
+                                            Design
+                                            from this platform. The whole process like enroll a course to get a
+                                            certification
+                                            are
+                                            well organized.</p>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
-                <div class="mt-88px">
+                <div class="mt-11 lg:mt-88px">
                     <div
-                        class="_edumy_slider_pagination  flex gap-x-2.5 justify-center items-center testimonial-swiper-pagination">
-                        <!-- <span></span>
-                    <span class="active"></span>
-                    <span></span> -->
+                        class="_edumy_slider_pagination  flex gap-x-1 sm:gap-x-2.5 justify-center items-center testimonial-swiper-pagination">
                     </div>
 
                 </div>
@@ -1650,7 +1714,7 @@
                 <div>
                     <h2 class="_edumy_section_title text-center">Our <span>Trusted</span> Partners</h2>
                 </div>
-                <ul class="flex items-center justify-center gap-x-16 mt-12">
+                <ul class="flex items-center flex-wrap justify-center gap-10 lg:gap-x-16 mt-12">
                     <li>
                         <img src="./assets/images/partners/partner-logo-01.svg" alt="partner-logo">
                     </li>
@@ -1676,23 +1740,22 @@
 
 
         <!-- FAQ Edumy Start  -->
-        <section class="faq _edumy_section_gap bg-primary-50 pt-20 pb-90px" id="faq">
+        <section class="faq _edumy_section_gap bg-primary-50 py-11 sm:py-16 md:pt-20 md:pb-90px" id="faq">
             <div class="container">
                 <div>
                     <h3 class="_edumy_section_title text-center">Frequently <span>Asked</span> Questions</h3>
                 </div>
-                <div class="w-8/12 mx-auto acoordion-section mt-65px">
-                    <!-- active-accordion -->
+                <div class="w-11/12 lg:w-8/12 mx-auto acoordion-section mt-65px">
                     <!-- Accordion -->
                     <div
                         class="_edumy_faq_accordion active-accordion group duration-300 border-b last:border-b-0 border-b-primary-300 pb-5 last:pb-0 mb-5 last:mb-0;">
                         <!-- Accordion Header -->
-                        <div class="_edumy_faq_accordion_header flex justify-between items-center cursor-pointer">
-                            <h4 class="text-22px text-dark underline decoration-dark font-semibold">1. What do you offer
+                        <div class="_edumy_faq_accordion_header flex justify-between items-center cursor-pointer gap-x-10">
+                            <h4 class="flex-shrink text-xl sm:text-22px text-dark underline decoration-dark font-semibold">1. What do you offer
                                 for
                                 a learner?</h4>
                             <button type="button"
-                                class="w-9 h-9 rounded-full bg-primary/10 flex justify-center items-center">
+                                class="flex-shrink-0 w-9 h-9 rounded-full bg-primary/10 flex justify-center items-center">
                                 <span class="hidden group-[.active-accordion]:block">
                                     <svg width="14" height="2" viewBox="0 0 14 2" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -1723,14 +1786,14 @@
                     </div>
                     <!-- Accordion -->
                     <div
-                        class="_edumy_faq_accordion  group duration-300 border-b last:border-b-0 border-b-primary-300 pb-5 last:pb-0 mb-5 last:mb-0;">
+                        class="_edumy_faq_accordion group duration-300 border-b last:border-b-0 border-b-primary-300 pb-5 last:pb-0 mb-5 last:mb-0;">
                         <!-- Accordion Header -->
-                        <div class="_edumy_faq_accordion_header flex justify-between items-center cursor-pointer">
-                            <h4 class="text-22px text-dark underline decoration-dark font-semibold">1. What do you offer
+                        <div class="_edumy_faq_accordion_header flex justify-between items-center cursor-pointer gap-x-10">
+                            <h4 class="flex-shrink text-xl sm:text-22px text-dark underline decoration-dark font-semibold">1. What do you offer
                                 for
                                 a learner?</h4>
                             <button type="button"
-                                class="w-9 h-9 rounded-full bg-primary/10 flex justify-center items-center">
+                                class="flex-shrink-0 w-9 h-9 rounded-full bg-primary/10 flex justify-center items-center">
                                 <span class="hidden group-[.active-accordion]:block">
                                     <svg width="14" height="2" viewBox="0 0 14 2" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -1761,14 +1824,14 @@
                     </div>
                     <!-- Accordion -->
                     <div
-                        class="_edumy_faq_accordion  group duration-300 border-b last:border-b-0 border-b-primary-300 pb-5 last:pb-0 mb-5 last:mb-0;">
+                        class="_edumy_faq_accordion group duration-300 border-b last:border-b-0 border-b-primary-300 pb-5 last:pb-0 mb-5 last:mb-0;">
                         <!-- Accordion Header -->
-                        <div class="_edumy_faq_accordion_header flex justify-between items-center cursor-pointer">
-                            <h4 class="text-22px text-dark underline decoration-dark font-semibold">1. What do you offer
+                        <div class="_edumy_faq_accordion_header flex justify-between items-center cursor-pointer gap-x-10">
+                            <h4 class="flex-shrink text-xl sm:text-22px text-dark underline decoration-dark font-semibold">1. What do you offer
                                 for
                                 a learner?</h4>
                             <button type="button"
-                                class="w-9 h-9 rounded-full bg-primary/10 flex justify-center items-center">
+                                class="flex-shrink-0 w-9 h-9 rounded-full bg-primary/10 flex justify-center items-center">
                                 <span class="hidden group-[.active-accordion]:block">
                                     <svg width="14" height="2" viewBox="0 0 14 2" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -1799,14 +1862,14 @@
                     </div>
                     <!-- Accordion -->
                     <div
-                        class="_edumy_faq_accordion  group duration-300 border-b last:border-b-0 border-b-primary-300 pb-5 last:pb-0 mb-5 last:mb-0;">
+                        class="_edumy_faq_accordion group duration-300 border-b last:border-b-0 border-b-primary-300 pb-5 last:pb-0 mb-5 last:mb-0;">
                         <!-- Accordion Header -->
-                        <div class="_edumy_faq_accordion_header  flex justify-between items-center cursor-pointer">
-                            <h4 class="text-22px text-dark underline decoration-dark font-semibold">1. What do you offer
+                        <div class="_edumy_faq_accordion_header flex justify-between items-center cursor-pointer gap-x-10">
+                            <h4 class="flex-shrink text-xl sm:text-22px text-dark underline decoration-dark font-semibold">1. What do you offer
                                 for
                                 a learner?</h4>
                             <button type="button"
-                                class="w-9 h-9 rounded-full bg-primary/10 flex justify-center items-center">
+                                class="flex-shrink-0 w-9 h-9 rounded-full bg-primary/10 flex justify-center items-center">
                                 <span class="hidden group-[.active-accordion]:block">
                                     <svg width="14" height="2" viewBox="0 0 14 2" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -1837,52 +1900,14 @@
                     </div>
                     <!-- Accordion -->
                     <div
-                        class="_edumy_faq_accordion  group duration-300 border-b last:border-b-0 border-b-primary-300 pb-5 last:pb-0 mb-5 last:mb-0;">
+                        class="_edumy_faq_accordion group duration-300 border-b last:border-b-0 border-b-primary-300 pb-5 last:pb-0 mb-5 last:mb-0;">
                         <!-- Accordion Header -->
-                        <div class="_edumy_faq_accordion_header flex justify-between items-center cursor-pointer">
-                            <h4 class="text-22px text-dark underline decoration-dark font-semibold">1. What do you offer
+                        <div class="_edumy_faq_accordion_header flex justify-between items-center cursor-pointer gap-x-10">
+                            <h4 class="flex-shrink text-xl sm:text-22px text-dark underline decoration-dark font-semibold">1. What do you offer
                                 for
                                 a learner?</h4>
                             <button type="button"
-                                class="w-9 h-9 rounded-full bg-primary/10 flex justify-center items-center">
-                                <span class="hidden group-[.active-accordion]:block">
-                                    <svg width="14" height="2" viewBox="0 0 14 2" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M13 1.998H1C0.734784 1.998 0.48043 1.89264 0.292893 1.70511C0.105357 1.51757 0 1.26322 0 0.998001C0 0.732785 0.105357 0.478431 0.292893 0.290895C0.48043 0.103358 0.734784 -0.0019989 1 -0.0019989H13C13.2652 -0.0019989 13.5196 0.103358 13.7071 0.290895C13.8946 0.478431 14 0.732785 14 0.998001C14 1.26322 13.8946 1.51757 13.7071 1.70511C13.5196 1.89264 13.2652 1.998 13 1.998Z"
-                                            fill="#309255" />
-                                    </svg>
-                                </span>
-                                <span class="block group-[.active-accordion]:hidden">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M18 12.998H13V17.998C13 18.2632 12.8946 18.5176 12.7071 18.7051C12.5196 18.8926 12.2652 18.998 12 18.998C11.7348 18.998 11.4804 18.8926 11.2929 18.7051C11.1054 18.5176 11 18.2632 11 17.998V12.998H6C5.73478 12.998 5.48043 12.8926 5.29289 12.7051C5.10536 12.5176 5 12.2632 5 11.998C5 11.7328 5.10536 11.4784 5.29289 11.2909C5.48043 11.1034 5.73478 10.998 6 10.998H11V5.998C11 5.73278 11.1054 5.47843 11.2929 5.29089C11.4804 5.10336 11.7348 4.998 12 4.998C12.2652 4.998 12.5196 5.10336 12.7071 5.29089C12.8946 5.47843 13 5.73278 13 5.998V10.998H18C18.2652 10.998 18.5196 11.1034 18.7071 11.2909C18.8946 11.4784 19 11.7328 19 11.998C19 12.2632 18.8946 12.5176 18.7071 12.7051C18.5196 12.8926 18.2652 12.998 18 12.998Z"
-                                            fill="#309255" />
-                                    </svg>
-                                </span>
-                            </button>
-                        </div>
-                        <!-- Accordion Body -->
-                        <div
-                            class="_edumy_faq_accordion_body duration-300 opacity-0 group-[.active-accordion]:opacity-100">
-                            <div class="pt-11px">
-                                <p class="text-base text-lightGray leading-6">We offered category wise demandable
-                                    courses
-                                    with expert mentors.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Accordion -->
-                    <div
-                        class="_edumy_faq_accordion  group duration-300 border-b last:border-b-0 border-b-primary-300 pb-5 last:pb-0 mb-5 last:mb-0;">
-                        <!-- Accordion Header -->
-                        <div class="_edumy_faq_accordion_header flex justify-between items-center cursor-pointer">
-                            <h4 class="text-22px text-dark underline decoration-dark font-semibold">1. What do you offer
-                                for
-                                a learner?</h4>
-                            <button type="button"
-                                class="w-9 h-9 rounded-full bg-primary/10 flex justify-center items-center">
+                                class="flex-shrink-0 w-9 h-9 rounded-full bg-primary/10 flex justify-center items-center">
                                 <span class="hidden group-[.active-accordion]:block">
                                     <svg width="14" height="2" viewBox="0 0 14 2" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -1920,21 +1945,23 @@
         <!-- Newsletter Edumy start  -->
         <section class="newsletter _edumy_section_gap mb-10">
             <div class="container">
-                <div class="bg-[#202020] rounded-25px pt-10 pb-85px">
+                <div class="bg-[#202020] rounded-15px sm:rounded-25px px-5 py-7 sm:px-7 sm:py-10 md:pt-10 md:pb-85px">
                     <div>
-                        <h2 class="_edumy_section_title text-white text-40px text-center decoration-white mb-3">Sign Up
+                        <h2
+                            class="_edumy_section_title text-white text-2xl sm:text-3xl md:text-40px text-center decoration-white mb-3">
+                            Sign Up
                             To
                             Our Newsletter</h2>
                         <p
-                            class="text-white text-lg leading-7 underline decoration-white text-center max-w-[418px] mx-auto">
-                            Subscribe to our newsletter and get manyinteresting things every week</p>
+                            class="text-white sm:text-lg leading-7 underline decoration-white text-center sm:max-w-[418px] mx-auto">
+                            Subscribe to our newsletter and get many interesting things every week</p>
                     </div>
                     <div class="mt-10">
-                        <div class="w-fit flex items-center gap-x-2.5 p-2.5 bg-white rounded mx-auto">
+                        <div class="w-full md:w-fit sm:flex items-center sm:gap-x-2.5 p-2.5 bg-transparent sm:bg-white rounded mx-auto">
                             <input type="text" placeholder="Write your email here"
-                                class="bg-[#F5F7FA] font-hindSiliguri rounded p-4 text-lg text-lightGray w-[465px] placeholder:text-lightGray placeholder:underline placeholder:decoration-lightGray placeholder:opacity-100">
+                                class="bg-[#F5F7FA] font-hindSiliguri rounded p-3 md:p-4 text-lg text-lightGray w-full md:w-[465px] placeholder:text-lightGray placeholder:underline placeholder:decoration-lightGray placeholder:opacity-100">
                             <button type="button"
-                                class="bg-secondary px-9 py-4 rounded font-hindSiliguri text-lg text-white underline decoration-white">Subscribe</button>
+                                class="bg-secondary w-full text-center sm:w-fit px-9 py-3 md:py-4  mt-3 sm:mt-0 rounded font-hindSiliguri text-lg text-white underline decoration-white">Subscribe</button>
                         </div>
                     </div>
                 </div>
@@ -1947,7 +1974,8 @@
     <!-- Footer Edumy Start  -->
     <footer class="footer _edumy_section_gap bg-primary-50 py-55px" id="footer">
         <div class="container">
-            <div class="flex justify-between items-center gap-x-[137px]">
+            <div
+                class="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-4 justify-between items-start gap-x-7 gap-y-10  xl:gap-x-[130px]">
                 <!-- Logo Section-->
                 <div class="logo-section">
                     <img src="./assets/images/footer/logo.svg" alt="logo">
@@ -1972,9 +2000,10 @@
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
-                                        d="M11.4758 8.88546L11.8904 6.15536H9.2968V4.38449C9.2968 3.6374 9.65845 2.90876 10.8201 2.90876H12V0.58449C12 0.58449 10.9297 0.400024 9.90685 0.400024C7.76986 0.400024 6.37443 1.70789 6.37443 4.07459V6.15536H4V8.88546H6.37443V15.4857C6.85114 15.5613 7.33881 15.6 7.83562 15.6C8.33242 15.6 8.82009 15.5613 9.2968 15.4857V8.88546H11.4758Z"
+                                        d="M14.0378 4.78714C14.0439 4.92795 14.0439 5.06235 14.0439 5.20315C14.0501 9.47196 10.9138 14.4 5.1783 14.4C3.48667 14.4 1.82591 13.8944 0.39975 12.9472C0.646703 12.9792 0.893657 12.992 1.14061 12.992C2.54207 12.992 3.90649 12.5056 5.01161 11.6032C3.67806 11.5776 2.50503 10.6752 2.09756 9.35676C2.56677 9.45276 3.04833 9.43356 3.50519 9.29916C2.05434 9.00476 1.01096 7.67995 1.00479 6.13755C1.00479 6.12475 1.00479 6.11195 1.00479 6.09915C1.43696 6.34875 1.92469 6.48955 2.4186 6.50235C1.05418 5.55515 0.628182 3.66714 1.45548 2.18874C3.04215 4.21114 5.37587 5.43355 7.88245 5.56795C7.62932 4.44794 7.97505 3.27034 8.78383 2.47674C10.0371 1.25433 12.0127 1.31833 13.1981 2.61754C13.8958 2.47674 14.5687 2.20794 15.1799 1.83034C14.9453 2.57914 14.4576 3.21274 13.8093 3.61594C14.4267 3.53914 15.0318 3.36634 15.5997 3.11034C15.1799 3.76314 14.649 4.32634 14.0378 4.78714Z"
                                         fill="#309255" />
                                 </svg>
+
                             </a>
                         </li>
                         <li>
@@ -1983,9 +2012,16 @@
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
-                                        d="M11.4758 8.88546L11.8904 6.15536H9.2968V4.38449C9.2968 3.6374 9.65845 2.90876 10.8201 2.90876H12V0.58449C12 0.58449 10.9297 0.400024 9.90685 0.400024C7.76986 0.400024 6.37443 1.70789 6.37443 4.07459V6.15536H4V8.88546H6.37443V15.4857C6.85114 15.5613 7.33881 15.6 7.83562 15.6C8.33242 15.6 8.82009 15.5613 9.2968 15.4857V8.88546H11.4758Z"
+                                        d="M4.05718 15.9434C3.10566 15.9001 2.58876 15.7418 2.24496 15.6077C1.7894 15.4303 1.46462 15.2192 1.12272 14.8778C0.780813 14.5363 0.569204 14.2115 0.392784 13.756C0.258686 13.4122 0.100336 12.8953 0.057063 11.9438C0.00951051 10.9152 0 10.6066 0 8.00071C0 5.39483 0.0104616 5.08669 0.0565875 4.05718C0.0998603 3.10566 0.259161 2.58971 0.392308 2.24496C0.569679 1.7894 0.781288 1.46462 1.12224 1.12224C1.46367 0.780813 1.78845 0.568728 2.24448 0.392308C2.58828 0.25821 3.10518 0.0998603 4.05671 0.0565875C5.08574 0.00951051 5.39483 0 7.99976 0C10.6056 0 10.9138 0.0104616 11.9433 0.0565875C12.8948 0.0998603 13.4108 0.259161 13.7555 0.392308C14.2111 0.568728 14.5359 0.780813 14.8778 1.12224C15.2197 1.46367 15.4303 1.78893 15.6077 2.24448C15.7418 2.58828 15.9001 3.10518 15.9434 4.05671C15.9905 5.08622 16 5.39436 16 8.00024C16 10.6052 15.9905 10.9143 15.9434 11.9438C15.9001 12.8953 15.7408 13.4122 15.6077 13.756C15.4303 14.2115 15.2192 14.5363 14.8778 14.8778C14.5363 15.2192 14.2111 15.4303 13.7555 15.6077C13.4117 15.7418 12.8948 15.9001 11.9433 15.9434C10.9147 15.9905 10.6056 16 7.99976 16C5.39483 16 5.08574 15.991 4.05718 15.9434Z"
                                         fill="#309255" />
+                                    <path
+                                        d="M4.05718 15.9434C3.10566 15.9001 2.58876 15.7418 2.24496 15.6077C1.7894 15.4303 1.46462 15.2192 1.12272 14.8778C0.780813 14.5363 0.569204 14.2116 0.392784 13.756C0.258686 13.4122 0.100336 12.8953 0.057063 11.9438C0.00951051 10.9152 0 10.6066 0 8.00071C0 5.39483 0.0104616 5.08669 0.0565875 4.05718C0.0998603 3.10566 0.259161 2.58971 0.392308 2.24496C0.569679 1.7894 0.781288 1.46462 1.12224 1.12224C1.46367 0.780813 1.78845 0.568728 2.24448 0.392308C2.58828 0.25821 3.10518 0.0998603 4.05671 0.0565875C5.08574 0.00951051 5.39484 0 7.99976 0C10.6056 0 10.9138 0.0104616 11.9433 0.0565875C12.8948 0.0998603 13.4108 0.259161 13.7555 0.392308C14.2111 0.568728 14.5359 0.780813 14.8778 1.12224C15.2197 1.46367 15.4303 1.78893 15.6077 2.24448C15.7418 2.58828 15.9001 3.10518 15.9434 4.05671C15.9905 5.08622 16 5.39436 16 8.00024C16 10.6052 15.9905 10.9143 15.9434 11.9438C15.9001 12.8953 15.7408 13.4122 15.6077 13.756C15.4303 14.2116 15.2192 14.5363 14.8778 14.8778C14.5363 15.2192 14.2111 15.4303 13.7555 15.6077C13.4117 15.7418 12.8948 15.9001 11.9433 15.9434C10.9147 15.9905 10.6056 16 7.99976 16C5.39484 16 5.08574 15.991 4.05718 15.9434Z"
+                                        fill="#309255" />
+                                    <path
+                                        d="M6.18472 7.94329C6.18472 6.97192 6.97195 6.18426 7.94332 6.18426C8.91469 6.18426 9.70235 6.97192 9.70235 7.94329C9.70235 8.91466 8.91469 9.70232 7.94332 9.70232C6.97195 9.70232 6.18472 8.91466 6.18472 7.94329ZM5.23382 7.94329C5.23382 9.43975 6.44686 10.6528 7.94332 10.6528C9.43979 10.6528 10.6528 9.43975 10.6528 7.94329C10.6528 6.44683 9.43979 5.23379 7.94332 5.23379C6.44686 5.23379 5.23386 6.44675 5.23386 7.94329M10.1269 5.12635C10.1269 5.25159 10.164 5.37403 10.2335 5.47818C10.303 5.58234 10.4019 5.66354 10.5176 5.71151C10.6333 5.75948 10.7606 5.77207 10.8834 5.74769C11.0063 5.72331 11.1191 5.66305 11.2077 5.57453C11.2963 5.48601 11.3566 5.37321 11.3811 5.25039C11.4056 5.12757 11.3931 5.00025 11.3452 4.88453C11.2974 4.76881 11.2162 4.66988 11.1121 4.60026C11.008 4.53064 10.8856 4.49346 10.7604 4.49341H10.7601C10.5923 4.49349 10.4313 4.56019 10.3126 4.67886C10.1938 4.79754 10.1271 4.95849 10.1269 5.12635ZM5.81155 12.2384C5.2971 12.215 5.01747 12.1293 4.83165 12.0569C4.58529 11.961 4.40952 11.8468 4.22471 11.6622C4.0399 11.4776 3.9255 11.302 3.83001 11.0557C3.75758 10.8699 3.67188 10.5902 3.6485 10.0758C3.62292 9.51958 3.61781 9.3525 3.61781 7.94338C3.61781 6.53425 3.62334 6.36764 3.6485 5.81097C3.67192 5.29652 3.75825 5.01736 3.83001 4.83107C3.92592 4.58472 4.04015 4.40894 4.22471 4.22413C4.40927 4.03932 4.58487 3.92492 4.83165 3.82943C5.01739 3.757 5.2971 3.6713 5.81155 3.64792C6.36775 3.62234 6.53483 3.61723 7.94332 3.61723C9.35181 3.61723 9.51906 3.62267 10.0757 3.648C10.5902 3.67143 10.8693 3.75776 11.0556 3.82952C11.302 3.92501 11.4778 4.03966 11.6626 4.22421C11.8474 4.40877 11.9614 4.5848 12.0573 4.83116C12.1297 5.0169 12.2154 5.2966 12.2388 5.81105C12.2644 6.36772 12.2695 6.53434 12.2695 7.94346C12.2695 9.35258 12.2644 9.5192 12.2388 10.0759C12.2154 10.5903 12.1292 10.8699 12.0573 11.0558C11.9614 11.3021 11.8471 11.4779 11.6626 11.6623C11.478 11.8467 11.302 11.9611 11.0556 12.057C10.8699 12.1294 10.5902 12.2151 10.0757 12.2385C9.51953 12.2641 9.35245 12.2692 7.94332 12.2692C6.5342 12.2692 6.36758 12.2641 5.81155 12.2385M5.76786 2.69858C5.20613 2.72416 4.82228 2.81323 4.48706 2.94367C4.14011 3.07837 3.84601 3.25909 3.55233 3.5523C3.25866 3.84552 3.07841 4.13966 2.9437 4.48703C2.81326 4.82246 2.72419 5.2061 2.69861 5.76783C2.67261 6.33045 2.66666 6.51032 2.66666 7.94329C2.66666 9.37627 2.67261 9.55614 2.69861 10.1188C2.72419 10.6805 2.81326 11.0641 2.9437 11.3996C3.07841 11.7465 3.2587 12.0412 3.55233 12.3343C3.84597 12.6274 4.13969 12.8078 4.48706 12.9429C4.82291 13.0734 5.20613 13.1624 5.76786 13.188C6.33077 13.2136 6.51035 13.22 7.94332 13.22C9.3763 13.22 9.55617 13.214 10.1188 13.188C10.6806 13.1624 11.0642 13.0734 11.3996 12.9429C11.7465 12.8078 12.0406 12.6275 12.3343 12.3343C12.628 12.0411 12.8079 11.7465 12.9429 11.3996C13.0734 11.0641 13.1629 10.6805 13.188 10.1188C13.2136 9.55572 13.2196 9.37627 13.2196 7.94329C13.2196 6.51032 13.2136 6.33045 13.188 5.76783C13.1625 5.20605 13.0734 4.82225 12.9429 4.48703C12.8079 4.14008 12.6275 3.84598 12.3343 3.5523C12.0411 3.25863 11.7465 3.07837 11.4 2.94367C11.0642 2.81323 10.6805 2.72374 10.1192 2.69858C9.55651 2.67287 9.37672 2.66663 7.94396 2.66663C6.51119 2.66663 6.33099 2.67258 5.76807 2.69858"
+                                        fill="#F5F7FA" />
                                 </svg>
+
                             </a>
                         </li>
 
@@ -1996,32 +2032,85 @@
                     <h6 class="_edumay_footer_menu_title">About Us</h6>
                     <ul>
                         <li class="mb-2 last:mb-0"><a href="#" class="_edumy_footer_menu_link">About Us</a></li>
-                        <li class="mb-2 last:mb-0"><a href="#" class="_edumy_footer_menu_link">About Us</a></li>
-                        <li class="mb-2 last:mb-0"><a href="#" class="_edumy_footer_menu_link">About Us</a></li>
-                        <li class="mb-2 last:mb-0"><a href="#" class="_edumy_footer_menu_link">About Us</a></li>
-                        <li class="mb-2 last:mb-0"><a href="#" class="_edumy_footer_menu_link">About Us</a></li>
+                        <li class="mb-2 last:mb-0"><a href="#" class="_edumy_footer_menu_link">Instructor
+                                Registration</a></li>
+                        <li class="mb-2 last:mb-0"><a href="#" class="_edumy_footer_menu_link">Instructors</a></li>
+                        <li class="mb-2 last:mb-0"><a href="#" class="_edumy_footer_menu_link">Our Event</a></li>
+                        <li class="mb-2 last:mb-0"><a href="#" class="_edumy_footer_menu_link">Courses List</a></li>
                     </ul>
                 </div>
-                <!-- About US -->
-                <div class="about-us">
-                    <h6 class="_edumay_footer_menu_title">About Us</h6>
+                <!-- Resources -->
+                <div class="Resources">
+                    <h6 class="_edumay_footer_menu_title">Resources</h6>
                     <ul>
-                        <li class="mb-2 last:mb-0"><a href="#" class="_edumy_footer_menu_link">About Us</a></li>
-                        <li class="mb-2 last:mb-0"><a href="#" class="_edumy_footer_menu_link">About Us</a></li>
-                        <li class="mb-2 last:mb-0"><a href="#" class="_edumy_footer_menu_link">About Us</a></li>
-                        <li class="mb-2 last:mb-0"><a href="#" class="_edumy_footer_menu_link">About Us</a></li>
-                        <li class="mb-2 last:mb-0"><a href="#" class="_edumy_footer_menu_link">About Us</a></li>
+                        <li class="mb-2 last:mb-0"><a href="#" class="_edumy_footer_menu_link">Home</a></li>
+                        <li class="mb-2 last:mb-0"><a href="#" class="_edumy_footer_menu_link">Courses</a></li>
+                        <li class="mb-2 last:mb-0"><a href="#" class="_edumy_footer_menu_link">Our Blog</a></li>
+                        <li class="mb-2 last:mb-0"><a href="#" class="_edumy_footer_menu_link">Terms & Conditions</a>
+                        </li>
+                        <li class="mb-2 last:mb-0"><a href="#" class="_edumy_footer_menu_link">Privacy Policy</a></li>
                     </ul>
                 </div>
-                <!-- About US -->
-                <div class="about-us" id="about-us">
-                    <h6 class="_edumay_footer_menu_title">About Us</h6>
+                <!-- Contact -->
+                <div class="contact" id="contact">
+                    <h6 class="_edumay_footer_menu_title">Contact</h6>
                     <ul>
-                        <li class="mb-2 last:mb-0"><a href="#" class="_edumy_footer_menu_link">About Us</a></li>
-                        <li class="mb-2 last:mb-0"><a href="#" class="_edumy_footer_menu_link">About Us</a></li>
-                        <li class="mb-2 last:mb-0"><a href="#" class="_edumy_footer_menu_link">About Us</a></li>
-                        <li class="mb-2 last:mb-0"><a href="#" class="_edumy_footer_menu_link">About Us</a></li>
-                        <li class="mb-2 last:mb-0"><a href="#" class="_edumy_footer_menu_link">About Us</a></li>
+                        <li class="mb-2 last:mb-0 flex items-center gap-x-1.5">
+                            <span>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M2.74059 3.40656L2.80104 3.34338C4.40723 1.73705 5.45319 1.31128 6.56921 1.95304C6.89024 2.13764 7.1912 2.39605 7.60044 2.8117L8.85575 4.11338C9.54911 4.86996 9.70673 5.59567 9.48096 6.44556L9.44986 6.55808L9.41533 6.66995L9.24752 7.16231C8.88834 8.26645 9.0383 8.88942 10.3162 10.167C11.6451 11.4956 12.2655 11.6043 13.4548 11.1887L13.6667 11.115L13.923 11.0318L14.0352 11.0006C14.9386 10.7596 15.7017 10.9519 16.511 11.7607L17.5224 12.7377L17.8202 13.0305C18.1503 13.3671 18.3684 13.6338 18.5296 13.9158C19.1673 15.0315 18.7411 16.0768 17.0886 17.7231L16.9314 17.8824C16.6846 18.1202 16.4541 18.2906 16.1155 18.4513C15.5471 18.7212 14.8755 18.823 14.0952 18.7145C12.1723 18.4471 9.73346 16.9299 6.64322 13.8404C6.39167 13.5889 6.15074 13.3423 5.9202 13.1004L5.47289 12.623C1.28134 8.06906 0.911563 5.27159 2.6293 3.51711L2.74059 3.40656ZM6.58867 3.56746C6.31717 3.2998 6.11996 3.13663 5.94609 3.03665C5.56148 2.81549 5.14624 2.90897 4.37773 3.57042L4.13626 3.78614C4.09414 3.82502 4.05106 3.86538 4.00697 3.90726L3.73008 4.17695L3.70513 4.20812L3.51741 4.39671C3.06379 4.86006 2.84891 5.42555 3.03408 6.39808C3.33792 7.99393 4.72867 10.1588 7.52699 12.9564C10.4427 15.8714 12.6643 17.2535 14.2673 17.4764C15.2018 17.6063 15.6785 17.38 16.1646 16.882L16.5353 16.5079C16.7092 16.326 16.8577 16.1611 16.9831 16.0105L17.1542 15.7949C17.5914 15.2126 17.6313 14.8632 17.4444 14.5361C17.3732 14.4116 17.2697 14.2752 17.1191 14.1084L16.9147 13.8925L16.7938 13.7715L15.5177 12.5394C15.0913 12.1461 14.7999 12.0903 14.3575 12.2084L14.2297 12.2451L13.7012 12.4245C12.1677 12.9198 11.0615 12.6796 9.43244 11.051C7.74524 9.36423 7.54736 8.23783 8.11268 6.616L8.14894 6.51178L8.24922 6.20963L8.29852 6.01705C8.38594 5.59791 8.28613 5.30567 7.83557 4.85503C7.81701 4.83647 7.79628 4.81557 7.77372 4.79269L6.58867 3.56746Z"
+                                        fill="#56616F" />
+                                </svg>
+                            </span>
+                            <a href="#" class="_edumy_footer_menu_link">+123 4567 8902</a>
+                        </li>
+                        <li class="mb-2 last:mb-0 flex items-center gap-x-1.5">
+                            <span>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M9.8141 11.2206C9.2566 11.2206 8.70076 11.0365 8.23576 10.6681L4.49826 7.65479C4.2291 7.43812 4.18743 7.04395 4.40326 6.77562C4.62076 6.50812 5.0141 6.46562 5.28243 6.68145L9.0166 9.69145C9.48576 10.0631 10.1466 10.0631 10.6191 9.68812L14.3158 6.68312C14.5841 6.46395 14.9774 6.50562 15.1958 6.77395C15.4133 7.04145 15.3724 7.43479 15.1049 7.65312L11.4016 10.6631C10.9333 11.0348 10.3733 11.2206 9.8141 11.2206Z"
+                                        fill="#56616F" />
+                                    <mask id="mask0_1_313" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0"
+                                        y="1" width="19" height="17">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M0.833344 1.66663H18.7499V17.9166H0.833344V1.66663Z" fill="white" />
+                                    </mask>
+                                    <g mask="url(#mask0_1_313)">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M5.69909 16.6666H13.8824C13.8841 16.665 13.8908 16.6666 13.8958 16.6666C14.8466 16.6666 15.6899 16.3266 16.3366 15.6808C17.0874 14.9333 17.4999 13.8591 17.4999 12.6566V6.93329C17.4999 4.60579 15.9783 2.91663 13.8824 2.91663H5.70075C3.60492 2.91663 2.08325 4.60579 2.08325 6.93329V12.6566C2.08325 13.8591 2.49659 14.9333 3.24659 15.6808C3.89325 16.3266 4.73742 16.6666 5.68742 16.6666H5.69909ZM5.68492 17.9166C4.39908 17.9166 3.25075 17.45 2.36409 16.5666C1.37659 15.5816 0.833252 14.1933 0.833252 12.6566V6.93329C0.833252 3.93079 2.92575 1.66663 5.70075 1.66663H13.8824C16.6574 1.66663 18.7499 3.93079 18.7499 6.93329V12.6566C18.7499 14.1933 18.2066 15.5816 17.2191 16.5666C16.3332 17.4491 15.1841 17.9166 13.8958 17.9166H13.8824H5.70075H5.68492Z"
+                                            fill="#56616F" />
+                                    </g>
+                                </svg>
+
+
+                            </span>
+                            <a href="#" class="_edumy_footer_menu_link">edumyit@gmail.com</a>
+                        </li>
+                        <li class="mb-2 last:mb-0 flex  gap-x-1.5">
+                            <span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M9.88502 8.99988C8.84579 8.99988 8.0004 9.84526 8.0004 10.8856C8.0004 11.9248 8.84579 12.7691 9.88502 12.7691C10.9243 12.7691 11.7696 11.9248 11.7696 10.8856C11.7696 9.84526 10.9243 8.99988 9.88502 8.99988ZM9.88513 14.3846C7.95529 14.3846 6.38513 12.8156 6.38513 10.8857C6.38513 8.9548 7.95529 7.38464 9.88513 7.38464C11.815 7.38464 13.3851 8.9548 13.3851 10.8857C13.3851 12.8156 11.815 14.3846 9.88513 14.3846Z"
+                                        fill="#56616F" />
+                                    <mask id="mask0_1_323" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="1"
+                                        y="2" width="18" height="21">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1 2H18.7687V23H1V2Z"
+                                            fill="white" />
+                                    </mask>
+                                    <g mask="url(#mask0_1_323)">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M9.88409 3.61538C5.87578 3.61538 2.61486 6.90754 2.61486 10.9525C2.61486 16.0991 8.67147 21.1132 9.88409 21.3803C11.0967 21.1122 17.1533 16.098 17.1533 10.9525C17.1533 6.90754 13.8924 3.61538 9.88409 3.61538ZM9.88413 23C7.95213 23 0.999512 17.0209 0.999512 10.9525C0.999512 6.01585 4.9852 2 9.88413 2C14.783 2 18.7687 6.01585 18.7687 10.9525C18.7687 17.0209 11.8161 23 9.88413 23Z"
+                                            fill="#56616F" />
+                                    </g>
+                                </svg>
+
+                            </span>
+                            <a href="#" class="_edumy_footer_menu_link">54 Gartner Drive East Elmhurst, NY 11370</a>
+                        </li>
                     </ul>
                 </div>
             </div>

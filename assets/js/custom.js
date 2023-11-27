@@ -16,7 +16,7 @@ const handleCoursesCardSlider = ({
   prevElClass,
 }) => {
   const swiperUiUxDesign = new Swiper(wrapperClass, {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 30,
     speed: 600,
 
@@ -24,6 +24,22 @@ const handleCoursesCardSlider = ({
     navigation: {
       nextEl: nextElClass,
       prevEl: prevElClass,
+    },
+
+    breakpoints: {
+      640 : {
+        slidesPerView: 2,
+        spaceBetween: 24,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 24,
+      },
+
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
     },
   });
 };
@@ -37,13 +53,23 @@ handleCoursesCardSlider({
 // Testimonial Card Slider Section
 const swiperTestimonial = new Swiper(".testimonial-swiper", {
   speed: 600,
-  spaceBetween: 120,
-  slidesPerView: 2,
+  spaceBetween: 48,
+  slidesPerView: 1,
   slidePerGroup: 1,
 
   pagination: {
     el: ".testimonial-swiper-pagination",
     clickable: true,
+  },
+
+  breakpoints: {
+
+    1024: {
+      slidesPerView: 2,
+      spaceBetween: 120,
+    },
+
+
   },
 });
 
