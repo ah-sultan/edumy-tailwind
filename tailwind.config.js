@@ -77,7 +77,18 @@ module.exports = {
         "10px" : "10px",
         "15px" : "15px",
         "25px" : "25px",
-      }
+      },
+
+      keyframes : {
+        stickyNav : {
+          "0%" : { transform: 'translateY(-100%)' },
+          "1000%" : { transform: 'translateY(0%)' },
+        }
+      },
+
+      animation : {
+        stickyNav: 'stickyNav 1s ease-in-out',
+      },
     },
   },
   plugins: [],

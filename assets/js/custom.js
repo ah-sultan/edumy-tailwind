@@ -1,3 +1,14 @@
+// Header Sticky Nav
+const header = document.getElementById("header");
+
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset >= 300) {
+    header.classList.add("sticky-nav");
+  } else {
+    header.classList.remove("sticky-nav");
+  }
+});
+
 // Courses Card Slider Section
 const handleCoursesCardSlider = ({
   wrapperClass,
@@ -7,6 +18,7 @@ const handleCoursesCardSlider = ({
   const swiperUiUxDesign = new Swiper(wrapperClass, {
     slidesPerView: 3,
     spaceBetween: 30,
+    speed: 600,
 
     // Navigation arrows
     navigation: {
@@ -39,37 +51,69 @@ const swiperTestimonial = new Swiper(".testimonial-swiper", {
 const edumyFaqAccordion = document.querySelectorAll("._edumy_faq_accordion");
 
 edumyFaqAccordion.forEach((accordion) => {
+  // Get Accordion Header & Body
   const faqAccordionHeader = accordion.firstElementChild;
   const faqAccordionBody = accordion.lastElementChild;
+
+  // Get Accordion Client Height
   const faqAccordionHeaderHeight = faqAccordionHeader.clientHeight;
   const faqAccordionBodyHeight = faqAccordionBody.clientHeight;
-const accP = parseInt(faqAccordionBody.style.paddingBottom)
 
-console.log(accP)
-  const accordionActiveClass = "_edumy_faq_accordion_active";
+  // Get Accordion Padding Bottom
+  const faqAccordionPaddingBottom =
+    window.getComputedStyle(accordion).paddingBottom;
 
+  // Style Accordion
   accordion.style.transition = "all .4s ease-in-out";
   accordion.style.overflow = "hidden";
 
+  // Defined Accordion Active Class
+  const accordionActiveClass = "active-accordion";
+
+  // If Has Active Class On Accordion Initially Then It Will Active
   if (accordion.classList.contains(accordionActiveClass)) {
-    accordion.style.height = `${
+    accordion.style.height = `calc(${
       faqAccordionHeaderHeight + faqAccordionBodyHeight
-    }px`;
+    }px + ${faqAccordionPaddingBottom})`;
     accordion.classList.add(accordionActiveClass);
   } else {
-    accordion.style.height = `${faqAccordionHeaderHeight}px`;
+    accordion.style.height = `calc(${faqAccordionHeaderHeight}px + ${faqAccordionPaddingBottom})`;
     accordion.classList.remove(accordionActiveClass);
   }
 
+  // Accordion Activation Toggler
   faqAccordionHeader.addEventListener("click", () => {
     if (accordion.classList.contains(accordionActiveClass)) {
-      accordion.style.height = `${faqAccordionHeaderHeight}px`;
+      // If Accordion Active it will be Deactivate
+      accordion.style.height = `calc(${faqAccordionHeaderHeight}px + ${faqAccordionPaddingBottom})`;
       accordion.classList.remove(accordionActiveClass);
     } else {
-      accordion.style.height = `${
+      // If Accordion Deactivate  it will be Active
+      accordion.style.height = `calc(${
         faqAccordionHeaderHeight + faqAccordionBodyHeight
-      }px`;
+      }px + ${faqAccordionPaddingBottom})`;
       accordion.classList.add(accordionActiveClass);
     }
+  });
+});
+
+// Scroll Top Btn
+
+const scrollTopBtn = document.getElementById("scroll-top");
+
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset >= 300) {
+    scrollTopBtn.style.opacity = "1";
+    scrollTopBtn.style.rotate = "0deg";
+  } else {
+    scrollTopBtn.style.opacity = "0";
+    scrollTopBtn.style.rotate = "180deg";
+  }
+});
+
+scrollTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
   });
 });
