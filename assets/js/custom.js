@@ -9,6 +9,25 @@ window.addEventListener("scroll", () => {
   }
 });
 
+// Mobile Nav Toggle
+
+const mobileNav = document.getElementById("mobile-nav");
+const mobileShowBtn = document.getElementById("show-mobile-nav-btn");
+const mobileHideBtn = document.getElementById("hide-mobile-nav-btn");
+const overlay = document.getElementById("overlay");
+
+mobileShowBtn.addEventListener("click", () => {
+  mobileNav.style.transform = "translateX(0)";
+  overlay.style.display = "block";
+  document.body.style.overflowY = "hidden";
+});
+
+mobileHideBtn.addEventListener("click", () => {
+  mobileNav.style.transform = "translateX(-100%)";
+  overlay.style.display = "none";
+  document.body.style.overflowY = "unset";
+});
+
 // Courses Card Slider Section
 const handleCoursesCardSlider = ({
   wrapperClass,
@@ -27,7 +46,7 @@ const handleCoursesCardSlider = ({
     },
 
     breakpoints: {
-      640 : {
+      640: {
         slidesPerView: 2,
         spaceBetween: 24,
       },
@@ -63,13 +82,10 @@ const swiperTestimonial = new Swiper(".testimonial-swiper", {
   },
 
   breakpoints: {
-
     1024: {
       slidesPerView: 2,
       spaceBetween: 120,
     },
-
-
   },
 });
 

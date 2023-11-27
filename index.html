@@ -21,6 +21,57 @@
 
 <body>
 
+    <!-- Mobile Nav Button -->
+    <div id="mobile-nav"
+        class="lg:hidden duration-500 fixed z-[100] inset-y-0 left-0 shadow-2xl w-[340px] bg-white h-screen px-6 py-7 -translate-x-full">
+        <!-- Header Section -->
+        <div class="flex items-center justify-between ">
+            <img src="./assets/images/header/logo.svg" alt="logo">
+            <button id="hide-mobile-nav-btn"
+                class="flex justify-center items-center border-2 border-primary-100 bg-primary-50 text-dark fill-dark w-10 h-10 rounded-full text-2xl">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                </svg>
+            </button>
+        </div>
+        <!-- Nav Section -->
+        <div class="mobile-nav mt-10 " id="nav">
+            <ul class="grid grid-cols-1 gap-y-4">
+                <li
+                    class="nav-item flex items-center justify-between border-b last:border-b-0 border-b-lightGray/40 pb-1.5">
+                    <a href="#" class="nav-link text-primary text-lg  font-medium leading-22px">Home</a>
+
+                </li>
+                <li
+                    class="nav-item flex items-center justify-between border-b last:border-b-0 border-b-lightGray/40 pb-1.5">
+                    <a href="#" class="nav-link text-dark text-lg  font-medium leading-22px">Course</a>
+                    <img src="./assets/images/header/arrow-down.svg" alt="arrow-down-icon">
+                </li>
+                <li
+                    class="nav-item flex items-center justify-between border-b last:border-b-0 border-b-lightGray/40 pb-1.5">
+                    <a href="#" class="nav-link text-dark text-lg  font-medium leading-22px">Blog</a>
+                </li>
+                <li
+                    class="nav-item flex items-center justify-between border-b last:border-b-0 border-b-lightGray/40 pb-1.5">
+                    <a href="#" class="nav-link text-dark text-lg  font-medium leading-22px">Pages</a>
+                    <img src="./assets/images/header/arrow-down.svg" alt="arrow-down-icon">
+                </li>
+            </ul>
+        </div>
+        <!-- Button Section -->
+        <div class="absolute bottom-4 inset-x-0 px-4 w-full">
+            <button class="rounded-sm w-full text-center text-lg uppercase p-2.5 bg-secondary text-white mb-3">Sign
+                In</button>
+            <button
+                class="rounded-sm w-full text-center text-lg uppercase p-2.5 bg-primary text-white">Register</button>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="fixed z-[80] w-screen h-screen inset-0 bg-black/80 hidden" id="overlay">
+    </div>
 
     <!-- Header Edumy Start -->
     <header class="header bg-white pt-13px pb-15px w-full z-40 " id="header">
@@ -63,14 +114,57 @@
                         <button class="_edumy_btn_primary">Register</button>
                     </div>
                 </div>
-                <!-- Toggle Btn -->
-                <button class="text-md p-2 border-primary-100 border-2 rounded-md fill-primary lg:hidden bg-primary-50">
-                    <svg width="20" height="20" class="text-xl w-5 h-5" xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 448 512">
-                        <path
-                            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
-                    </svg>
-                </button>
+
+                <div class="flex items-center gap-x-3 lg:hidden">
+                    <!-- Search Toggles -->
+                    <button class="">
+                        <img src="./assets/images/header/search-icon.svg" alt="search-icon" class="w-6">
+                    </button>
+                    <!-- Nav Toggle Btn -->
+                    <button id="show-mobile-nav-btn"
+                        class="text-md p-2 border-primary-100 border-2 rounded-md fill-primary bg-primary-50">
+                        <svg width="20" height="20" class="text-xl w-5 h-5" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512">
+                            <path
+                                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Search Bar -->
+        <div class="py-1 bg-primary mt-2" id="mobile-search-bar">
+            <div class="container">
+                <div class="w-full relative">
+                    <input type="text"
+                        class="w-full block px-4 py-2 pr-12 bg-primary-300/10 text-white placeholder:text-white/70"
+                        placeholder="Search">
+                    <span class="absolute top-1/2 -translate-y-1/2 right-5">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_1_45" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="1" y="1"
+                                width="14" height="14">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M1.33334 1.3335H14.3179V14.3182H1.33334V1.3335Z" fill="white" />
+                            </mask>
+                            <g mask="url(#mask0_1_45)">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M7.82589 2.3335C4.79722 2.3335 2.33322 4.79683 2.33322 7.8255C2.33322 10.8542 4.79722 13.3182 7.82589 13.3182C10.8539 13.3182 13.3179 10.8542 13.3179 7.8255C13.3179 4.79683 10.8539 2.3335 7.82589 2.3335ZM7.82589 14.3182C4.24589 14.3182 1.33322 11.4055 1.33322 7.8255C1.33322 4.2455 4.24589 1.3335 7.82589 1.3335C11.4059 1.3335 14.3179 4.2455 14.3179 7.8255C14.3179 11.4055 11.4059 14.3182 7.82589 14.3182Z"
+                                    fill="white" />
+                            </g>
+                            <mask id="mask1_1_45" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="11" y="11"
+                                width="4" height="5">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M11.4933 11.8047H14.8427V15.1479H11.4933V11.8047Z" fill="white" />
+                            </mask>
+                            <g mask="url(#mask1_1_45)">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M14.3428 15.1479C14.2155 15.1479 14.0875 15.0992 13.9895 15.0019L11.6402 12.6592C11.4448 12.4639 11.4442 12.1472 11.6395 11.9519C11.8342 11.7552 12.1508 11.7565 12.3468 11.9505L14.6962 14.2939C14.8915 14.4892 14.8922 14.8052 14.6968 15.0005C14.5995 15.0992 14.4708 15.1479 14.3428 15.1479Z"
+                                    fill="white" />
+                            </g>
+                        </svg>
+
+                    </span>
+                </div>
             </div>
         </div>
     </header>
@@ -80,7 +174,7 @@
         <!-- Hero Edumy Start -->
         <section class="hero bg-[#EEFBF3] overflow-x-hidden" id="home">
             <div class="container">
-                <div class="flex items-center flex-wrap lg:flex-nowrap">
+                <div class="flex items-center lg:items-start flex-wrap lg:flex-nowrap">
                     <div class="w-full lg:w-1/2 xl:w-7/12 lg:pr-30px xl:pr-0">
                         <div class="content-section pt-6 pb-14 lg:py-24 xl:pt-[129px] xl:pb-[128px]">
                             <h1
@@ -1750,8 +1844,11 @@
                     <div
                         class="_edumy_faq_accordion active-accordion group duration-300 border-b last:border-b-0 border-b-primary-300 pb-5 last:pb-0 mb-5 last:mb-0;">
                         <!-- Accordion Header -->
-                        <div class="_edumy_faq_accordion_header flex justify-between items-center cursor-pointer gap-x-10">
-                            <h4 class="flex-shrink text-xl sm:text-22px text-dark underline decoration-dark font-semibold">1. What do you offer
+                        <div
+                            class="_edumy_faq_accordion_header flex justify-between items-center cursor-pointer gap-x-10">
+                            <h4
+                                class="flex-shrink text-xl sm:text-22px text-dark underline decoration-dark font-semibold">
+                                1. What do you offer
                                 for
                                 a learner?</h4>
                             <button type="button"
@@ -1788,8 +1885,11 @@
                     <div
                         class="_edumy_faq_accordion group duration-300 border-b last:border-b-0 border-b-primary-300 pb-5 last:pb-0 mb-5 last:mb-0;">
                         <!-- Accordion Header -->
-                        <div class="_edumy_faq_accordion_header flex justify-between items-center cursor-pointer gap-x-10">
-                            <h4 class="flex-shrink text-xl sm:text-22px text-dark underline decoration-dark font-semibold">1. What do you offer
+                        <div
+                            class="_edumy_faq_accordion_header flex justify-between items-center cursor-pointer gap-x-10">
+                            <h4
+                                class="flex-shrink text-xl sm:text-22px text-dark underline decoration-dark font-semibold">
+                                1. What do you offer
                                 for
                                 a learner?</h4>
                             <button type="button"
@@ -1826,8 +1926,11 @@
                     <div
                         class="_edumy_faq_accordion group duration-300 border-b last:border-b-0 border-b-primary-300 pb-5 last:pb-0 mb-5 last:mb-0;">
                         <!-- Accordion Header -->
-                        <div class="_edumy_faq_accordion_header flex justify-between items-center cursor-pointer gap-x-10">
-                            <h4 class="flex-shrink text-xl sm:text-22px text-dark underline decoration-dark font-semibold">1. What do you offer
+                        <div
+                            class="_edumy_faq_accordion_header flex justify-between items-center cursor-pointer gap-x-10">
+                            <h4
+                                class="flex-shrink text-xl sm:text-22px text-dark underline decoration-dark font-semibold">
+                                1. What do you offer
                                 for
                                 a learner?</h4>
                             <button type="button"
@@ -1864,8 +1967,11 @@
                     <div
                         class="_edumy_faq_accordion group duration-300 border-b last:border-b-0 border-b-primary-300 pb-5 last:pb-0 mb-5 last:mb-0;">
                         <!-- Accordion Header -->
-                        <div class="_edumy_faq_accordion_header flex justify-between items-center cursor-pointer gap-x-10">
-                            <h4 class="flex-shrink text-xl sm:text-22px text-dark underline decoration-dark font-semibold">1. What do you offer
+                        <div
+                            class="_edumy_faq_accordion_header flex justify-between items-center cursor-pointer gap-x-10">
+                            <h4
+                                class="flex-shrink text-xl sm:text-22px text-dark underline decoration-dark font-semibold">
+                                1. What do you offer
                                 for
                                 a learner?</h4>
                             <button type="button"
@@ -1902,8 +2008,11 @@
                     <div
                         class="_edumy_faq_accordion group duration-300 border-b last:border-b-0 border-b-primary-300 pb-5 last:pb-0 mb-5 last:mb-0;">
                         <!-- Accordion Header -->
-                        <div class="_edumy_faq_accordion_header flex justify-between items-center cursor-pointer gap-x-10">
-                            <h4 class="flex-shrink text-xl sm:text-22px text-dark underline decoration-dark font-semibold">1. What do you offer
+                        <div
+                            class="_edumy_faq_accordion_header flex justify-between items-center cursor-pointer gap-x-10">
+                            <h4
+                                class="flex-shrink text-xl sm:text-22px text-dark underline decoration-dark font-semibold">
+                                1. What do you offer
                                 for
                                 a learner?</h4>
                             <button type="button"
@@ -1948,7 +2057,7 @@
                 <div class="bg-[#202020] rounded-15px sm:rounded-25px px-5 py-7 sm:px-7 sm:py-10 md:pt-10 md:pb-85px">
                     <div>
                         <h2
-                            class="_edumy_section_title text-white text-2xl sm:text-3xl md:text-40px text-center decoration-white mb-3">
+                            class="_edumy_section_title text-white text-2xl sm:text-3xl md:text-42px text-center decoration-white mb-3">
                             Sign Up
                             To
                             Our Newsletter</h2>
@@ -1957,7 +2066,8 @@
                             Subscribe to our newsletter and get many interesting things every week</p>
                     </div>
                     <div class="mt-10">
-                        <div class="w-full md:w-fit sm:flex items-center sm:gap-x-2.5 p-2.5 bg-transparent sm:bg-white rounded mx-auto">
+                        <div
+                            class="w-full md:w-fit sm:flex items-center sm:gap-x-2.5 p-2.5 bg-transparent sm:bg-white rounded mx-auto">
                             <input type="text" placeholder="Write your email here"
                                 class="bg-[#F5F7FA] font-hindSiliguri rounded p-3 md:p-4 text-lg text-lightGray w-full md:w-[465px] placeholder:text-lightGray placeholder:underline placeholder:decoration-lightGray placeholder:opacity-100">
                             <button type="button"

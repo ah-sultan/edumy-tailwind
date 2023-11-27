@@ -907,6 +907,11 @@ input:focus {
 }
 
 @media (min-width: 1024px) {
+  ._edumy_feature_card:nth-child(2n+1)::before {
+    --tw-content: "";
+    content: var(--tw-content);
+  }
+
   ._edumy_feature_card:nth-child(3n+1)::before {
     --tw-content: none;
     content: var(--tw-content);
@@ -985,16 +990,42 @@ input:focus {
   position: relative;
 }
 
+.inset-0 {
+  inset: 0px;
+}
+
+.inset-x-0 {
+  left: 0px;
+  right: 0px;
+}
+
+.inset-y-0 {
+  top: 0px;
+  bottom: 0px;
+}
+
 .-right-10 {
   right: -2.5rem;
+}
+
+.bottom-4 {
+  bottom: 1rem;
 }
 
 .bottom-7 {
   bottom: 1.75rem;
 }
 
+.left-0 {
+  left: 0px;
+}
+
 .right-15px {
   right: 15px;
+}
+
+.right-5 {
+  right: 1.25rem;
 }
 
 .right-7 {
@@ -1019,6 +1050,14 @@ input:focus {
 
 .z-40 {
   z-index: 40;
+}
+
+.z-\[100\] {
+  z-index: 100;
+}
+
+.z-\[80\] {
+  z-index: 80;
 }
 
 .order-first {
@@ -1104,8 +1143,16 @@ input:focus {
   margin-top: 15px;
 }
 
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
 .mt-25px {
   margin-top: 25px;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
 }
 
 .mt-45px {
@@ -1130,14 +1177,6 @@ input:focus {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mt-4 {
-  margin-top: 1rem;
-}
-
-.mt-3 {
-  margin-top: 0.75rem;
 }
 
 .block {
@@ -1180,6 +1219,10 @@ input:focus {
   height: 2.25rem;
 }
 
+.h-screen {
+  height: 100vh;
+}
+
 .w-0 {
   width: 0px;
 }
@@ -1204,6 +1247,10 @@ input:focus {
   width: 1.25rem;
 }
 
+.w-6 {
+  width: 1.5rem;
+}
+
 .w-8 {
   width: 2rem;
 }
@@ -1216,6 +1263,10 @@ input:focus {
   width: 190px;
 }
 
+.w-\[340px\] {
+  width: 340px;
+}
+
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
@@ -1225,12 +1276,12 @@ input:focus {
   width: 100%;
 }
 
-.max-w-\[228px\] {
-  max-width: 228px;
+.w-screen {
+  width: 100vw;
 }
 
-.max-w-\[418px\] {
-  max-width: 418px;
+.max-w-\[228px\] {
+  max-width: 228px;
 }
 
 .max-w-\[500px\] {
@@ -1241,20 +1292,21 @@ input:focus {
   max-width: 613px;
 }
 
-.flex-shrink-0 {
-  flex-shrink: 0;
-}
-
 .flex-shrink {
   flex-shrink: 1;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
 }
 
 .grow {
   flex-grow: 1;
 }
 
-.basis-9 {
-  flex-basis: 2.25rem;
+.-translate-x-full {
+  --tw-translate-x: -100%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .-translate-y-1\/2 {
@@ -1272,10 +1324,6 @@ input:focus {
 
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .grid-cols-3 {
@@ -1381,6 +1429,10 @@ input:focus {
   row-gap: 30px;
 }
 
+.gap-y-4 {
+  row-gap: 1rem;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -1393,8 +1445,8 @@ input:focus {
   border-radius: 0.25rem;
 }
 
-.rounded-25px {
-  border-radius: 25px;
+.rounded-15px {
+  border-radius: 15px;
 }
 
 .rounded-full {
@@ -1409,12 +1461,12 @@ input:focus {
   border-radius: 0.375rem;
 }
 
-.rounded-xl {
-  border-radius: 0.75rem;
+.rounded-sm {
+  border-radius: 0.125rem;
 }
 
-.rounded-15px {
-  border-radius: 15px;
+.rounded-xl {
+  border-radius: 0.75rem;
 }
 
 .border {
@@ -1446,6 +1498,10 @@ input:focus {
 .border-primary-100 {
   --tw-border-opacity: 1;
   border-color: rgb(238 251 243 / var(--tw-border-opacity));
+}
+
+.border-b-lightGray\/40 {
+  border-bottom-color: rgb(86 97 111 / 0.4);
 }
 
 .border-b-primary-300 {
@@ -1483,6 +1539,10 @@ input:focus {
   background-color: rgb(249 249 249 / var(--tw-bg-opacity));
 }
 
+.bg-black\/80 {
+  background-color: rgb(0 0 0 / 0.8);
+}
+
 .bg-lightGray {
   --tw-bg-opacity: 1;
   background-color: rgb(86 97 111 / var(--tw-bg-opacity));
@@ -1491,6 +1551,10 @@ input:focus {
 .bg-primary {
   --tw-bg-opacity: 1;
   background-color: rgb(48 146 85 / var(--tw-bg-opacity));
+}
+
+.bg-primary-300\/10 {
+  background-color: rgb(197 255 220 / 0.1);
 }
 
 .bg-primary-50 {
@@ -1507,13 +1571,17 @@ input:focus {
   background-color: rgb(255 162 0 / var(--tw-bg-opacity));
 }
 
+.bg-transparent {
+  background-color: transparent;
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-transparent {
-  background-color: transparent;
+.fill-dark {
+  fill: #1D2733;
 }
 
 .fill-primary {
@@ -1546,19 +1614,29 @@ input:focus {
   padding-right: 15px;
 }
 
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
 
-.px-7 {
-  padding-left: 1.75rem;
-  padding-right: 1.75rem;
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .px-9 {
   padding-left: 2.25rem;
   padding-right: 2.25rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .py-10 {
@@ -1569,6 +1647,11 @@ input:focus {
 .py-11 {
   padding-top: 2.75rem;
   padding-bottom: 2.75rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .py-3 {
@@ -1586,6 +1669,14 @@ input:focus {
   padding-bottom: 1.75rem;
 }
 
+.pb-1 {
+  padding-bottom: 0.25rem;
+}
+
+.pb-1\.5 {
+  padding-bottom: 0.375rem;
+}
+
 .pb-14 {
   padding-bottom: 3.5rem;
 }
@@ -1598,8 +1689,8 @@ input:focus {
   padding-bottom: 1.25rem;
 }
 
-.pb-90px {
-  padding-bottom: 90px;
+.pr-5 {
+  padding-right: 1.25rem;
 }
 
 .pt-10 {
@@ -1618,16 +1709,20 @@ input:focus {
   padding-top: 19px;
 }
 
-.pt-20 {
-  padding-top: 5rem;
-}
-
 .pt-4 {
   padding-top: 1rem;
 }
 
 .pt-6 {
   padding-top: 1.5rem;
+}
+
+.pr-1 {
+  padding-right: 0.25rem;
+}
+
+.pr-12 {
+  padding-right: 3rem;
 }
 
 .text-center {
@@ -1642,9 +1737,9 @@ input:focus {
   font-size: 22px;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-4xl {
@@ -1672,11 +1767,6 @@ input:focus {
   line-height: 1.75rem;
 }
 
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
 .font-medium {
   font-weight: 500;
 }
@@ -1687,6 +1777,10 @@ input:focus {
 
 .font-semibold {
   font-weight: 600;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 .leading-22px {
@@ -1798,6 +1892,14 @@ input:focus {
 .placeholder\:text-lightGray::placeholder {
   --tw-text-opacity: 1;
   color: rgb(86 97 111 / var(--tw-text-opacity));
+}
+
+.placeholder\:text-white\/70::-moz-placeholder {
+  color: rgb(255 255 255 / 0.7);
+}
+
+.placeholder\:text-white\/70::placeholder {
+  color: rgb(255 255 255 / 0.7);
 }
 
 .placeholder\:underline::-moz-placeholder {
@@ -1925,6 +2027,10 @@ input:focus {
     margin-bottom: 2rem;
   }
 
+  .sm\:mt-0 {
+    margin-top: 0px;
+  }
+
   .sm\:mt-10 {
     margin-top: 2.5rem;
   }
@@ -1935,10 +2041,6 @@ input:focus {
 
   .sm\:mt-50px {
     margin-top: 50px;
-  }
-
-  .sm\:mt-0 {
-    margin-top: 0px;
   }
 
   .sm\:block {
@@ -1966,12 +2068,12 @@ input:focus {
     width: fit-content;
   }
 
-  .sm\:max-w-\[591px\] {
-    max-width: 591px;
-  }
-
   .sm\:max-w-\[418px\] {
     max-width: 418px;
+  }
+
+  .sm\:max-w-\[591px\] {
+    max-width: 591px;
   }
 
   .sm\:grid-cols-2 {
@@ -1988,12 +2090,12 @@ input:focus {
          column-gap: 0.625rem;
   }
 
-  .sm\:rounded-lg {
-    border-radius: 0.5rem;
-  }
-
   .sm\:rounded-25px {
     border-radius: 25px;
+  }
+
+  .sm\:rounded-lg {
+    border-radius: 0.5rem;
   }
 
   .sm\:border-0 {
@@ -2024,6 +2126,16 @@ input:focus {
     padding-right: 1.25rem;
   }
 
+  .sm\:px-7 {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+  }
+
+  .sm\:py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
   .sm\:py-14 {
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
@@ -2044,22 +2156,12 @@ input:focus {
     padding-bottom: 0.75rem;
   }
 
-  .sm\:px-7 {
-    padding-left: 1.75rem;
-    padding-right: 1.75rem;
-  }
-
-  .sm\:py-10 {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-  }
-
   .sm\:pt-19px {
     padding-top: 19px;
   }
 
-  .sm\:pt-20 {
-    padding-top: 5rem;
+  .sm\:text-22px {
+    font-size: 22px;
   }
 
   .sm\:text-2xl {
@@ -2071,6 +2173,11 @@ input:focus {
     font-size: 34px;
   }
 
+  .sm\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
   .sm\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
@@ -2079,15 +2186,6 @@ input:focus {
   .sm\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .sm\:text-22px {
-    font-size: 22px;
-  }
-
-  .sm\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
   }
 
   .sm\:font-bold {
@@ -2134,12 +2232,12 @@ input:focus {
     padding-bottom: 85px;
   }
 
-  .md\:pt-10 {
-    padding-top: 2.5rem;
-  }
-
   .md\:pb-90px {
     padding-bottom: 90px;
+  }
+
+  .md\:pt-10 {
+    padding-top: 2.5rem;
   }
 
   .md\:pt-20 {
@@ -2151,8 +2249,8 @@ input:focus {
     line-height: 2rem;
   }
 
-  .md\:text-40px {
-    font-size: 40px;
+  .md\:text-42px {
+    font-size: 42px;
   }
 
   .md\:text-5xl {
@@ -2220,6 +2318,10 @@ input:focus {
 
   .lg\:flex-nowrap {
     flex-wrap: nowrap;
+  }
+
+  .lg\:items-start {
+    align-items: flex-start;
   }
 
   .lg\:gap-x-16 {

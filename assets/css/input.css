@@ -89,7 +89,7 @@
 
   /* Feature Section */
   ._edumy_feature_card {
-    @apply relative before:absolute before:hidden md:before:block before:w-px before:h-[153px] before:bg-[#EAEAEA] before:-left-8 xl:before:-left-12 before:top-1/2 before:-translate-y-1/2 [&:nth-child(2n+1)]:before:content-none lg:[&:nth-child(3n+1)]:before:content-none;
+    @apply relative before:absolute before:hidden md:before:block before:w-px before:h-[153px] before:bg-[#EAEAEA] before:-left-8 xl:before:-left-12 before:top-1/2 before:-translate-y-1/2 [&:nth-child(2n+1)]:before:content-none lg:[&:nth-child(2n+1)]:before:content-[""] lg:[&:nth-child(3n+1)]:before:content-none;
   }
 
   ._edumy_feature_card_title {
