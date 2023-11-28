@@ -34,6 +34,7 @@
                     <path
                         d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
                 </svg>
+                
             </button>
         </div>
         <!-- Nav Section -->
@@ -117,8 +118,9 @@
 
                 <div class="flex items-center gap-x-3 lg:hidden">
                     <!-- Search Toggles -->
-                    <button class="">
-                        <img src="./assets/images/header/search-icon.svg" alt="search-icon" class="w-6">
+                    <button class="search-toggle-btn group relative" id="search-toggle-btn">
+                        <span class="absolute -top-1 left-[5px] text-xl text-lightGray opacity-0 duration-300 group-[.active-search-bar]:opacity-100 ">⨯</span>
+                        <img src="./assets/images/header/search-icon.svg" alt="search-icon" class="w-6 group-[.active-search-bar]:grayscale-[60]">
                     </button>
                     <!-- Nav Toggle Btn -->
                     <button id="show-mobile-nav-btn"
@@ -133,9 +135,9 @@
             </div>
         </div>
         <!-- Search Bar -->
-        <div class="py-1 bg-primary mt-2" id="mobile-search-bar">
+        <div class="top-3.5 relative bg-primary duration-300 overflow-hidden" id="mobile-search-bar">
             <div class="container">
-                <div class="w-full relative">
+                <div class="w-full relative py-1">
                     <input type="text"
                         class="w-full block px-4 py-2 pr-12 bg-primary-300/10 text-white placeholder:text-white/70"
                         placeholder="Search">

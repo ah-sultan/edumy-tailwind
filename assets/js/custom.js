@@ -9,7 +9,7 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Mobile Nav Toggle
+// Mobile Nav Toggler
 
 const mobileNav = document.getElementById("mobile-nav");
 const mobileShowBtn = document.getElementById("show-mobile-nav-btn");
@@ -27,6 +27,29 @@ mobileHideBtn.addEventListener("click", () => {
   overlay.style.display = "none";
   document.body.style.overflowY = "unset";
 });
+
+// Mobile Search Bar Toggler
+const mobileSearchBar = document.getElementById("mobile-search-bar")
+const searchToggleBtn = document.getElementById("search-toggle-btn")
+
+// Get Mobile Search Bar Height
+const mobileSearchBarHeight = mobileSearchBar.clientHeight
+mobileSearchBar.style.height = "0"
+
+
+searchToggleBtn.addEventListener("click",() => {
+
+  if(mobileSearchBar.classList.contains("active-search-bar")){
+    mobileSearchBar.style.height = "0"
+    mobileSearchBar.classList.remove("active-search-bar")
+    searchToggleBtn.classList.remove("active-search-bar")
+  }else{
+    mobileSearchBar.style.height = `${mobileSearchBarHeight}px`
+    mobileSearchBar.classList.add("active-search-bar")
+    searchToggleBtn.classList.add("active-search-bar")
+  }
+
+})
 
 // Courses Card Slider Section
 const handleCoursesCardSlider = ({
