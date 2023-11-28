@@ -26,11 +26,11 @@
   }
 
   ._edumy_section_title {
-    @apply text-3xl md:text-4xl leading-snug lg:text-5xl lg:leading-[58px] text-dark font-bold underline decoration-dark;
+    @apply text-3xl md:text-4xl leading-snug lg:text-5xl lg:leading-[58px] text-dark font-bold;
   }
 
   ._edumy_section_title > span {
-    @apply text-primary underline decoration-primary;
+    @apply text-primary;
   }
 
   ._edumy_slider_btn {
@@ -65,7 +65,7 @@
   }
 
   ._edumay_course_card_category {
-    @apply bg-primary-100 text-primary decoration-primary font-medium text-sm px-4 py-7px leading-[auto];
+    @apply bg-primary-100 text-primary rounded decoration-primary font-medium text-sm px-4 py-7px leading-[auto];
   }
 
   ._edumy_course_card_text {
@@ -93,7 +93,7 @@
   }
 
   ._edumy_feature_card_title {
-    @apply text-dark text-22px leading-8 font-medium mt-4 mb-3 underline decoration-gray;
+    @apply text-dark text-22px leading-8 font-medium mt-4 mb-3;
   }
 
   /* Testimonial Section */
@@ -109,9 +109,9 @@
 
   /* Footer Section */
   ._edumay_footer_menu_title {
-    @apply text-dark text-22px leading-30px font-hindSiliguri mb-4 font-medium underline decoration-dark;
+    @apply text-dark text-22px leading-30px font-hindSiliguri mb-4 font-medium;
   }
   ._edumy_footer_menu_link {
-    @apply text-lightGray font-hindSiliguri text-lg leading-8 underline decoration-lightGray;
+    @apply text-lightGray font-hindSiliguri text-lg leading-8;
   }
 }

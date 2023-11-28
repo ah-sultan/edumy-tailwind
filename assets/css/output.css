@@ -654,8 +654,6 @@ input:focus {
   line-height: 1.375;
   --tw-text-opacity: 1;
   color: rgb(29 39 51 / var(--tw-text-opacity));
-  text-decoration-line: underline;
-  text-decoration-color: #1D2733;
 }
 
 @media (min-width: 768px) {
@@ -676,8 +674,6 @@ input:focus {
 ._edumy_section_title > span {
   --tw-text-opacity: 1;
   color: rgb(48 146 85 / var(--tw-text-opacity));
-  text-decoration-line: underline;
-  text-decoration-color: #309255;
 }
 
 ._edumy_slider_btn {
@@ -780,6 +776,7 @@ input:focus {
 }
 
 ._edumay_course_card_category {
+  border-radius: 0.25rem;
   --tw-bg-opacity: 1;
   background-color: rgb(238 251 243 / var(--tw-bg-opacity));
   padding-left: 1rem;
@@ -926,8 +923,6 @@ input:focus {
   line-height: 2rem;
   --tw-text-opacity: 1;
   color: rgb(29 39 51 / var(--tw-text-opacity));
-  text-decoration-line: underline;
-  text-decoration-color: #747474;
 }
 
 /* Testimonial Section */
@@ -964,8 +959,6 @@ input:focus {
   line-height: 30px;
   --tw-text-opacity: 1;
   color: rgb(29 39 51 / var(--tw-text-opacity));
-  text-decoration-line: underline;
-  text-decoration-color: #1D2733;
 }
 
 ._edumy_footer_menu_link {
@@ -974,8 +967,6 @@ input:focus {
   line-height: 2rem;
   --tw-text-opacity: 1;
   color: rgb(86 97 111 / var(--tw-text-opacity));
-  text-decoration-line: underline;
-  text-decoration-color: #56616F;
 }
 
 .fixed {
@@ -1093,11 +1084,6 @@ input:focus {
 .my-6 {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
-}
-
-.-mx-1 {
-  margin-left: -0.25rem;
-  margin-right: -0.25rem;
 }
 
 .mb-10 {
@@ -1596,10 +1582,6 @@ input:focus {
   fill: #309255;
 }
 
-.p-1 {
-  padding: 0.25rem;
-}
-
 .p-2 {
   padding: 0.5rem;
 }
@@ -1614,6 +1596,16 @@ input:focus {
 
 .p-7px {
   padding: 7px;
+}
+
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.px-0\.5 {
+  padding-left: 0.125rem;
+  padding-right: 0.125rem;
 }
 
 .px-15px {
@@ -1841,22 +1833,6 @@ input:focus {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.underline {
-  text-decoration-line: underline;
-}
-
-.decoration-dark {
-  text-decoration-color: #1D2733;
-}
-
-.decoration-gray {
-  text-decoration-color: #747474;
-}
-
-.decoration-lightGray {
-  text-decoration-color: #56616F;
-}
-
 .decoration-white {
   text-decoration-color: #fff;
 }
@@ -1883,38 +1859,12 @@ input:focus {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.placeholder\:text-lightGray::-moz-placeholder {
-  --tw-text-opacity: 1;
-  color: rgb(86 97 111 / var(--tw-text-opacity));
-}
-
-.placeholder\:text-lightGray::placeholder {
-  --tw-text-opacity: 1;
-  color: rgb(86 97 111 / var(--tw-text-opacity));
-}
-
 .placeholder\:text-white\/70::-moz-placeholder {
   color: rgb(255 255 255 / 0.7);
 }
 
 .placeholder\:text-white\/70::placeholder {
   color: rgb(255 255 255 / 0.7);
-}
-
-.placeholder\:underline::-moz-placeholder {
-  text-decoration-line: underline;
-}
-
-.placeholder\:underline::placeholder {
-  text-decoration-line: underline;
-}
-
-.placeholder\:decoration-lightGray::-moz-placeholder {
-  text-decoration-color: #56616F;
-}
-
-.placeholder\:decoration-lightGray::placeholder {
-  text-decoration-color: #56616F;
 }
 
 .placeholder\:opacity-100::-moz-placeholder {
