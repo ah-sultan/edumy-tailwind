@@ -92,6 +92,12 @@ handleCoursesCardSlider({
   prevElClass: ".ux-ui-swiper-prev",
 });
 
+handleCoursesCardSlider({
+  wrapperClass: ".web-development-swiper",
+  nextElClass: ".web-development-swiper-next",
+  prevElClass: ".web-development-swiper-prev",
+});
+
 // Testimonial Card Slider Section
 const swiperTestimonial = new Swiper(".testimonial-swiper", {
   speed: 600,
