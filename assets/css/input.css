@@ -72,7 +72,7 @@
     @apply text-gray text-sm font-normal decoration-gray flex items-center gap-x-2;
   }
   ._edumy_course_card_title {
-    @apply text-dark font-semibold text-22px sm:text-2xl leading-8 decoration-dark capitalize;
+    @apply text-dark font-semibold text-22px md:text-2xl leading-8 decoration-dark capitalize;
   }
 
   ._edumy_course_card_price {

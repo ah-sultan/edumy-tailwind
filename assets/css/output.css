@@ -818,7 +818,7 @@ input:focus {
   text-decoration-color: #1D2733;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 768px) {
   ._edumy_course_card_title {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -1095,6 +1095,11 @@ input:focus {
   margin-bottom: 1.5rem;
 }
 
+.-mx-1 {
+  margin-left: -0.25rem;
+  margin-right: -0.25rem;
+}
+
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -1338,10 +1343,6 @@ input:focus {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
 .flex-wrap {
   flex-wrap: wrap;
 }
@@ -1416,11 +1417,6 @@ input:focus {
 .gap-x-3\.5 {
   -moz-column-gap: 0.875rem;
        column-gap: 0.875rem;
-}
-
-.gap-x-30px {
-  -moz-column-gap: 30px;
-       column-gap: 30px;
 }
 
 .gap-x-6 {
@@ -1600,6 +1596,10 @@ input:focus {
   fill: #309255;
 }
 
+.p-1 {
+  padding: 0.25rem;
+}
+
 .p-2 {
   padding: 0.5rem;
 }
@@ -1614,15 +1614,6 @@ input:focus {
 
 .p-7px {
   padding: 7px;
-}
-
-.p-1 {
-  padding: 0.25rem;
-}
-
-.px-1 {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
 }
 
 .px-15px {
@@ -1982,6 +1973,48 @@ input:focus {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.before\:bg-\[\#00978B\]::before {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 151 139 / var(--tw-bg-opacity));
+}
+
+.before\:bg-\[\#4BB04E\]::before {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(75 176 78 / var(--tw-bg-opacity));
+}
+
+.before\:bg-\[\#693BB7\]::before {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(105 59 183 / var(--tw-bg-opacity));
+}
+
+.before\:bg-\[\#8BC24D\]::before {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(139 194 77 / var(--tw-bg-opacity));
+}
+
+.before\:bg-\[\#9A2AB0\]::before {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(154 42 176 / var(--tw-bg-opacity));
+}
+
+.before\:bg-\[\#C5DC39\]::before {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(197 220 57 / var(--tw-bg-opacity));
+}
+
+.before\:bg-\[\#E32263\]::before {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(227 34 99 / var(--tw-bg-opacity));
+}
+
 .before\:bg-\[\#E3E3E3\]::before {
   content: var(--tw-content);
   --tw-bg-opacity: 1;
@@ -1998,48 +2031,6 @@ input:focus {
   content: var(--tw-content);
   --tw-bg-opacity: 1;
   background-color: rgb(243 67 52 / var(--tw-bg-opacity));
-}
-
-.before\:bg-\[\#E32263\]::before {
-  content: var(--tw-content);
-  --tw-bg-opacity: 1;
-  background-color: rgb(227 34 99 / var(--tw-bg-opacity));
-}
-
-.before\:bg-\[\#9A2AB0\]::before {
-  content: var(--tw-content);
-  --tw-bg-opacity: 1;
-  background-color: rgb(154 42 176 / var(--tw-bg-opacity));
-}
-
-.before\:bg-\[\#693BB7\]::before {
-  content: var(--tw-content);
-  --tw-bg-opacity: 1;
-  background-color: rgb(105 59 183 / var(--tw-bg-opacity));
-}
-
-.before\:bg-\[\#00978B\]::before {
-  content: var(--tw-content);
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 151 139 / var(--tw-bg-opacity));
-}
-
-.before\:bg-\[\#4BB04E\]::before {
-  content: var(--tw-content);
-  --tw-bg-opacity: 1;
-  background-color: rgb(75 176 78 / var(--tw-bg-opacity));
-}
-
-.before\:bg-\[\#8BC24D\]::before {
-  content: var(--tw-content);
-  --tw-bg-opacity: 1;
-  background-color: rgb(139 194 77 / var(--tw-bg-opacity));
-}
-
-.before\:bg-\[\#C5DC39\]::before {
-  content: var(--tw-content);
-  --tw-bg-opacity: 1;
-  background-color: rgb(197 220 57 / var(--tw-bg-opacity));
 }
 
 .last\:mb-0:last-child {
@@ -2397,6 +2388,11 @@ input:focus {
     padding-right: 0px;
   }
 
+  .lg\:py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
   .lg\:py-24 {
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -2416,10 +2412,6 @@ input:focus {
 
   .lg\:pr-30px {
     padding-right: 30px;
-  }
-
-  .lg\:pt-0 {
-    padding-top: 0px;
   }
 
   .lg\:pt-100px {
@@ -2461,6 +2453,10 @@ input:focus {
     max-width: 549px;
   }
 
+  .xl\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
   .xl\:gap-x-10 {
     -moz-column-gap: 2.5rem;
          column-gap: 2.5rem;
@@ -2483,6 +2479,11 @@ input:focus {
 
   .xl\:gap-y-\[111px\] {
     row-gap: 111px;
+  }
+
+  .xl\:py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 
   .xl\:pb-\[128px\] {
